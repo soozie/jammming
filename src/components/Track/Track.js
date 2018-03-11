@@ -9,11 +9,15 @@ class Track extends React.Component {
 
   handleAddRemoveTrack(event) {
     event.preventDefault();
-    const trackId = this.props.trackProp.id;
-    this.props.addTrack(trackId);
+    const track = this.props.trackProp;
+    this.props.addTrack(track);
   }
 
   render() {
+    let aValue = '+';
+    if (this.props.type === "new") {
+      aValue = '--';
+    };
     const titleTrack = this.props.trackProp.name;
     const artistTrack = this.props.trackProp.artists.map(artist => {
       return artist.name;
@@ -25,7 +29,9 @@ class Track extends React.Component {
           <h3>{titleTrack}</h3>
           <p>{`${artistTrack} | ${albumTrack}`}</p>
         </div>
-        <a className="Track-action" onClick={this.handleAddRemoveTrack}>-</a>
+        <a className="Track-action" onClick={this.handleAddRemoveTrack}>
+          {aValue}
+        </a>
       </div>
     )
   }

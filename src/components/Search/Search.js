@@ -4,7 +4,7 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: '',
+      input: ''
     }
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);

@@ -19,6 +19,7 @@ class Results extends React.Component {
                   trackProp={track}
                   key={track.id}
                   addTrack={this.props.addTracksToPlaylist}
+                  type="result"
                 />
               )
             })

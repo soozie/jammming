@@ -5,7 +5,10 @@ import './App.css';
 import Search from './components/Search/Search.js';
 import Results from './components/Results/Results.js';
 import NewPlaylist from './components/NewPlaylist/NewPlaylist.js';
-import { Spotify, apiKey } from './util/Spotify.js';
+import Spotify, { apiKey } from './util/Spotify.js';
+
+const spotify = new Spotify();
+
 
 class App extends Component {
   constructor() {
@@ -17,19 +20,22 @@ class App extends Component {
     }
     this.state = {
       searchResults: [],
-      isLoggedInState: isLoggedIn
+      isLoggedInState: isLoggedIn,
+      newPlaylist: [],
+      userId: null
     };
     this.handleSpotifySearch = this.handleSpotifySearch.bind(this);
     this.handleSaveSpotifyPlaylist = this.handleSaveSpotifyPlaylist.bind(this);
     this.handleAddTracksToPlaylist = this.handleAddTracksToPlaylist.bind(this);
+    this.handleRemoveTracksFromPlaylist = this.handleRemoveTracksFromPlaylist.bind(this);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     const queryObject = querystring.parse(window.location.search.replace('?', ''));
+    const accessToken = querystring.parse(window.location.hash.replace('#', '')).access_token;
     if (queryObject.error === 'access_denied') {
       alert('Puppa, loggati di nuovo');
-    } else if (queryObject.access_token) {
-      const accessToken = querystring.parse(window.location.hash.replace('#', '')).access_token;
+    } else if (accessToken) {
       console.log(accessToken);
       fetch('https://api.spotify.com/v1/me', {
         headers: {
@@ -39,7 +45,9 @@ class App extends Component {
         }
       })
       .then(response => { return response.json(); })
-      .then(jsonResponse => { console.log(jsonResponse); })
+      .then(jsonResponse => {
+        this.setState({ userId: jsonResponse.id });
+      })
       .catch(error => { console.error(error); });
     }
 
@@ -50,55 +58,84 @@ class App extends Component {
     if (!this.state.isLoggedInState) {
       const redirectUri = 'http:%2F%2Flocalhost:3000%2Fcallback';
       const clientId = apiKey;
-      const url = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=user-read-private%20user-read-email&response_type=token&state=123`;
+      const scopes = 'playlist-modify-private%20playlist-modify-public%20playlist-read-private%20user-read-private%20user-read-email';
+      const url = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes}&response_type=token&state=123`;
       window.location.href = url;
     } else {
-      // https://api.spotify.com/v1/search
-      const accessToken = querystring.parse(window.location.hash.replace('#', '')).access_token;
-      fetch(`https://api.spotify.com/v1/search?q=${valueSpotifySearch}&type=track,album,artist`, {
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-          'Authorization': 'Bearer ' + accessToken
-        }
-      })
-      .then(response => { return response.json(); })
-      .then(jsonResponse => {
-        const trackItems = jsonResponse.tracks.items;
-        // const albumItems = jsonResponse.albums.items;
-        // const artistItems = jsonResponse.artists.items;
-        // const firstTrack = trackItems[0];
-        this.setState({
-          searchResults: trackItems
-        });
-
-      })
-      .catch(error => { console.error(error); });
+      spotify.customFetch(valueSpotifySearch)
+        .then(data => {
+          this.setState({
+            searchResults: data
+          });
+        })
     }
   }
 
-  handleAddTracksToPlaylist(trackId) {
+  handleAddTracksToPlaylist(trackObject) {
+    const currentNewPlaylist = this.state.newPlaylist;
+    let alreadyExists = false;
+    currentNewPlaylist.forEach(track => {
+      if (track.id === trackObject.id) {
+        alreadyExists = true;
+      }
+    });
+    if (!alreadyExists) {
+      currentNewPlaylist.push(trackObject);
+    }
+    this.setState({
+      newPlaylist: currentNewPlaylist
+    });
+  }
+
+  handleRemoveTracksFromPlaylist(trackObject) {
+    const currentNewPlaylist = this.state.newPlaylist.filter(track => {
+      if (trackObject.id !== track.id) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    this.setState({
+      newPlaylist: currentNewPlaylist
+    });
+  }
+
+  handleSaveSpotifyPlaylist(newPlaylistName) {
     const accessToken = querystring.parse(window.location.hash.replace('#', '')).access_token;
-    fetch(`https://api.spotify.com/v1/audio-features/${trackId}`, {
+    fetch(`https://api.spotify.com/v1/users/${this.state.userId}/playlists`, {
+      method: "POST",
+      body: JSON.stringify({
+        name: newPlaylistName
+      }),
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json',
         'Authorization': 'Bearer ' + accessToken
       }
     })
     .then(response => { return response.json(); })
     .then(jsonResponse => {
       console.log(jsonResponse);
+      const playlistId = jsonResponse.id;
+
+      fetch(`https://api.spotify.com/v1/users/${this.state.userId}/playlists/${playlistId}/tracks`, {
+        method: "POST",
+        body: JSON.stringify({
+          uris: this.state.newPlaylist.map(track => {
+            return track.uri;
+          })
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + accessToken
+        }
+      })
+      .then(response => { return response.json(); })
+      .then(jsonResponse => {
+        console.log(jsonResponse);
+      })
+      .catch(error => { console.error(error); });
     })
     .catch(error => { console.error(error); });
-  }
-
-  handleSaveSpotifyPlaylist(newPlaylistName) {
-    console.log(newPlaylistName);
-    // Spotify.search(input).then(businesses => {
-    //   console.log(businesses);
-    //   this.setState({ businesses: businesses });
-    // });
   }
 
   render() {
@@ -115,7 +152,9 @@ class App extends Component {
               addTracksToPlaylist={this.handleAddTracksToPlaylist}
             />
             <NewPlaylist
-              savePlaylist={this.handleAddSpotifyPlaylist}
+              savePlaylist={this.handleSaveSpotifyPlaylist}
+              newPlaylist={this.state.newPlaylist}
+              removeTracksFromPlaylist={this.handleRemoveTracksFromPlaylist}
             />
           </div>
         </div>

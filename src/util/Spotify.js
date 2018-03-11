@@ -3,17 +3,28 @@ import SpotifyKey from '../keys.js';
 
 export const apiKey = SpotifyKey.Spotify;
 
-// `This object will store the functionality needed to interact with the Yelp API.`
-export const Spotify = {
-  // `This is the method we’ll use to retrieve search results from the Yelp API.`
-  login: () => {
-    console.log(apiKey);
-    var scope = 'user-read-private user-read-email';
-    const url = `https://accounts.spotify.com/authorize?client_id=${apiKey}&redirect_uri=http:%2F%2Flocalhost:3000%2Fcallback&scope=user-read-private%20user-read-email&response_type=token&state=123`;
-    return fetch(url, {
-      mode: 'no-cors'
-    });
+class Spotify {
+  constructor() {
+    this._clientId = apiKey;
+    this._scopes = 'playlist-modify-private%20playlist-modify-public%20playlist-read-private%20user-read-private%20user-read-email';
+    this._accessToken = querystring.parse(window.location.hash.replace('#', '')).access_token;
   }
-};
 
-window.Spotify = Spotify;
+  customFetch(valueSpotifySearch) {
+    return fetch(`https://api.spotify.com/v1/search?q=${valueSpotifySearch}&type=track,album,artist`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + this._accessToken
+      }
+    })
+    .then(response => { return response.json(); })
+    .then(jsonResponse => {
+      const trackItems = jsonResponse.tracks.items;
+      return trackItems;
+    })
+    .catch(error => { return error; });
+  }
+}
+
+export default Spotify;
