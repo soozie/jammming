@@ -22,7 +22,8 @@ class App extends Component {
       searchResults: [],
       isLoggedInState: isLoggedIn,
       newPlaylist: [],
-      userId: null
+      userId: null,
+      saveInProgress: false
     };
     this.handleSpotifySearch = this.handleSpotifySearch.bind(this);
     this.handleSaveSpotifyPlaylist = this.handleSaveSpotifyPlaylist.bind(this);
@@ -36,7 +37,6 @@ class App extends Component {
     if (queryObject.error === 'access_denied') {
       alert('Puppa, loggati di nuovo');
     } else if (accessToken) {
-      console.log(accessToken);
       fetch('https://api.spotify.com/v1/me', {
         headers: {
           'Content-Type': 'application/json',
@@ -102,6 +102,7 @@ class App extends Component {
 
   handleSaveSpotifyPlaylist(newPlaylistName) {
     const accessToken = querystring.parse(window.location.hash.replace('#', '')).access_token;
+    this.setState({ saveInProgress: true });
     fetch(`https://api.spotify.com/v1/users/${this.state.userId}/playlists`, {
       method: "POST",
       body: JSON.stringify({
@@ -114,7 +115,6 @@ class App extends Component {
     })
     .then(response => { return response.json(); })
     .then(jsonResponse => {
-      console.log(jsonResponse);
       const playlistId = jsonResponse.id;
 
       fetch(`https://api.spotify.com/v1/users/${this.state.userId}/playlists/${playlistId}/tracks`, {
@@ -132,6 +132,10 @@ class App extends Component {
       .then(response => { return response.json(); })
       .then(jsonResponse => {
         console.log(jsonResponse);
+        this.setState({
+          newPlaylist: [],
+          saveInProgress: false
+        });
       })
       .catch(error => { console.error(error); });
     })
@@ -155,6 +159,7 @@ class App extends Component {
               savePlaylist={this.handleSaveSpotifyPlaylist}
               newPlaylist={this.state.newPlaylist}
               removeTracksFromPlaylist={this.handleRemoveTracksFromPlaylist}
+              saveInProgress={this.state.saveInProgress}
             />
           </div>
         </div>

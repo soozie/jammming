@@ -20,7 +20,10 @@ class Spotify {
     })
     .then(response => { return response.json(); })
     .then(jsonResponse => {
-      const trackItems = jsonResponse.tracks.items;
+      let trackItems = [];
+      if (!jsonResponse.error) {
+        trackItems = jsonResponse.tracks.items;
+      }
       return trackItems;
     })
     .catch(error => { return error; });
