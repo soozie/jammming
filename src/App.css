@@ -123,6 +123,10 @@ h2 {
   box-shadow: 0 4px 2px 2px #000000;
 }
 
+.Playlist.hidden {
+  display: none;
+}
+
 .Playlist input {
   width: 100%;
   border: 0;

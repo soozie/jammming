@@ -6,7 +6,7 @@ class NewPlaylist extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      playlistName: ''
+      playlistName: 'riri'
     };
     this.handlePlaylistNameChange = this.handlePlaylistNameChange.bind(this);
     this.handleSavePlaylist = this.handleSavePlaylist.bind(this);
@@ -21,12 +21,16 @@ class NewPlaylist extends React.Component {
   }
 
   render() {
+    let hiddenClassName = '';
+    if (!this.props.newPlaylistVisible) {
+      hiddenClassName = 'hidden';
+    }
     let aValue = 'SAVE TO SPOTIFY';
     if (this.props.saveInProgress) {
       aValue = (<PulseLoader color={'#FF0000'} />);
     };
     return (
-      <div className="Playlist">
+      <div className={`Playlist New ${hiddenClassName}`}>
         <input
           type="text"
           onChange={this.handlePlaylistNameChange}
