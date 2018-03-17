@@ -16,7 +16,7 @@ class Track extends React.Component {
   render() {
     let aValue = '+';
     if (this.props.type === "new") {
-      aValue = '--';
+      aValue = '-';
     };
     const titleTrack = this.props.trackProp.name;
     const artistTrack = this.props.trackProp.artists.map(artist => {

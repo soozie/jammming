@@ -1,6 +1,7 @@
 import React from 'react';
 import { PulseLoader } from 'halogenium';
 import Track from '../Track/Track.js';
+import './NewPlaylist.css';
 
 class NewPlaylist extends React.Component {
   constructor(props) {
@@ -23,20 +24,20 @@ class NewPlaylist extends React.Component {
   render() {
     let hiddenClassName = '';
     if (!this.props.newPlaylistVisible) {
-      hiddenClassName = 'hidden';
+      hiddenClassName = 'Playlist--hidden';
     }
     let aValue = 'SAVE TO SPOTIFY';
     if (this.props.saveInProgress) {
       aValue = (<PulseLoader color={'#FF0000'} />);
     };
     return (
-      <div className={`Playlist New ${hiddenClassName}`}>
+      <div className={`Playlist ${hiddenClassName}`}>
         <input
           type="text"
           onChange={this.handlePlaylistNameChange}
           value={this.state.playlistName}
           placeholder="New Playlist" />
-        <div className="TrackList">
+        <div className="Playlist__trackList">
           {
             this.props.newPlaylist.map(track => {
               return (
@@ -51,7 +52,7 @@ class NewPlaylist extends React.Component {
           }
         </div>
         <a
-          className="Playlist-save"
+          className="Playlist__save"
           onClick={this.handleSavePlaylist}
         >{aValue}</a>
       </div>

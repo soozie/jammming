@@ -1,0 +1,8 @@
+html body #root .MyPlaylist {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  html body #root .MyPlaylist--hidden {
+    display: none; }
+
+/*# sourceMappingURL=MyPlaylists.css.map */

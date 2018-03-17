@@ -1,0 +1,15 @@
+html {
+  body {
+    #root {
+      .MyPlaylist {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &--hidden {
+          display: none;
+        }
+      }
+    }
+  }
+}

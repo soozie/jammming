@@ -2,6 +2,7 @@ import React from 'react';
 import { PulseLoader } from 'halogenium';
 import MyPlaylists from '../MyPlaylists/MyPlaylists.js';
 import NewPlaylist from '../NewPlaylist/NewPlaylist.js';
+import './PlaylistBox.css';
 
 class PlaylistBox extends React.Component {
   constructor(props) {
@@ -57,7 +58,7 @@ class PlaylistBox extends React.Component {
       aValue = (<PulseLoader color={'#FF0000'} />);
     };
     return (
-      <div className="Playlist Box">
+      <div className="PlaylistBox">
         <NewPlaylist
           savePlaylist={this.handleSaveSpotifyPlaylist}
           newPlaylist={this.props.newPlaylist}
@@ -69,13 +70,13 @@ class PlaylistBox extends React.Component {
           myPlaylistVisible={this.state.myPlaylistVisible}
           myPlaylists={this.state.myPlaylists}
         />
-        <div>
+        <div className="PlaylistBox__buttons">
           <a
-            className="Playlist-save"
+            className="PlaylistBox__save"
             onClick={() => {}}>NEW PLAYLIST
           </a>
           <a
-            className="Playlist-save"
+            className="PlaylistBox__save"
             onClick={() => {}}>{aValue}
           </a>
         </div>

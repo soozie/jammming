@@ -1,0 +1,36 @@
+html body #root .PlaylistBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  width: 37%;
+  max-height: 950px;
+  padding: 2.27rem 1.16rem;
+  background-color: rgba(1, 12, 63, 0.7);
+  box-shadow: 0 4px 2px 2px #000000; }
+  html body #root .PlaylistBox__buttons {
+    display: flex;
+    width: 100%;
+    margin-top: 16px;
+    justify-content: space-evenly;
+    align-items: center; }
+  html body #root .PlaylistBox__save {
+    cursor: pointer;
+    width: 10rem;
+    padding: .77rem 0;
+    border-radius: 54px;
+    margin-top: 1.27rem;
+    background-color: #6c41ec;
+    text-align: center;
+    font-size: .83rem;
+    transition: background-color .25s; }
+    html body #root .PlaylistBox__save:hover {
+      background-color: rgba(108, 65, 233, 0.7); }
+    html body #root .PlaylistBox__save:active {
+      transform: scale(0.98); }
+
+@media only screen and (max-width: 1020px) {
+  html body #root .PlaylistBox {
+    width: 90%; } }
+
+/*# sourceMappingURL=PlaylistBox.css.map */

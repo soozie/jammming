@@ -1,5 +1,6 @@
 import React from 'react';
 import { PulseLoader } from 'halogenium';
+import './Playlist.css';
 
 class Playlist extends React.Component {
   constructor(props) {
@@ -11,12 +12,15 @@ class Playlist extends React.Component {
 
 
   render() {
+    const playlistTitle = this.props.playlistProp.name;
+    const numOfTracks = this.props.playlistProp.tracks.total;
     return (
-      <div className="Track">
-        <div className="Track-information">
-          <p /* need to change this */ >Playlist Title | Num Playlist</p>
+      <div className="EachPlaylist">
+        <div className="EachPlaylist__information">
+          <h3>Title: {playlistTitle}</h3>
+          <p>Tracks: {numOfTracks}</p>
         </div>
-        <a className="Track-action" onClick={this.handleAddRemoveTrack}>
+        <a className="EachPlaylist__action" onClick={this.handleAddRemoveTrack}>
         </a>
       </div>
     );

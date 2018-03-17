@@ -1,6 +1,7 @@
 import React from 'react';
 import { PulseLoader } from 'halogenium';
-import Playlist from '../Playlist/Playlist.js'
+import Playlist from '../Playlist/Playlist.js';
+import './MyPlaylists.css';
 
 class MyPlaylists extends React.Component {
   constructor(props) {
@@ -19,16 +20,19 @@ class MyPlaylists extends React.Component {
   render() {
     let hiddenClassName = '';
     if (!this.props.myPlaylistVisible) {
-      hiddenClassName = 'hidden';
+      hiddenClassName = 'MyPlaylist--hidden';
     }
     return (
-      <div className={`Playlist My ${hiddenClassName}`}>
+      <div className={`MyPlaylist ${hiddenClassName}`}>
         <h1>My Playlists</h1>
         <div className="MyPlaylistsContainer">
           {
-            this.props.myPlaylists.map(track => {
+            this.props.myPlaylists.map(playlist => {
               return (
-                <Playlist />
+                <Playlist
+                  playlistProp={playlist}
+                  key={playlist.id}
+                />
               )
             })
           }
