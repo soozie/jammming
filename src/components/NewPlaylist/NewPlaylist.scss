@@ -1,16 +1,12 @@
 html {
   body {
     #root {
-      .Playlist {
+      .NewPlaylist {
         display: flex;
         flex-direction: column;
         align-items: center;
         overflow-y: scroll;
-        width: 37%;
         max-height: 950px;
-        padding: 2.27rem 1.16rem;
-        background-color: rgba(1, 12, 63, 0.7);
-        box-shadow: 0 4px 2px 2px #000000;
 
         &--hidden {
           display: none;
@@ -28,12 +24,6 @@ html {
           padding: .88rem 0;
           text-align: center;
           width: 100%;
-
-          /* width: 287px;
-          margin-bottom: 2.22rem;
-          color: #010c3f;
-          font-size: 1rem;
-          border-bottom: 1px solid #6f6f6f; */
 
           &:focus {
             outline: none;
@@ -68,7 +58,7 @@ html {
   body {
     #root {
       @media only screen and (max-width: 1020px) {
-        .Playlist {
+        .NewPlaylist {
           width: 90%;
         }
       }

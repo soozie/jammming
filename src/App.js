@@ -63,7 +63,7 @@ class App extends Component {
           <Search
             searchSpotify={this.handleSpotifySearch}
           />
-          <div className="App-playlist">
+          <div className="App__playlist">
             <Results
               searchResults={this.state.searchResults}
               updatePlaylist={this.handleUpdatePlaylist}

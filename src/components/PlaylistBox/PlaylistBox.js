@@ -10,18 +10,28 @@ class PlaylistBox extends React.Component {
     this.state = {
       saveInProgress: false,
       myPlaylists: [],
+      playlistName: '',
+      selectedPlaylist: {},
       myPlaylistVisible: true,
-      newPlaylistVisible: false
+      newPlaylistVisible: false,
+      playlistViewButton: 'NEW PLAYLIST',
+      saveButton: 'SAVE PLAYLIST'
     };
+    this.handlePlaylistNameChange = this.handlePlaylistNameChange.bind(this);
     this.handleRemoveTracksFromPlaylist = this.handleRemoveTracksFromPlaylist.bind(this);
     this.handleSaveSpotifyPlaylist = this.handleSaveSpotifyPlaylist.bind(this);
+    this.handleShowNewPlaylist = this.handleShowNewPlaylist.bind(this);
+    this.handleSelectedPlaylist = this.handleSelectedPlaylist.bind(this);
   }
 
   componentDidMount() {
+    this.getUpdatedPlaylists();
+  }
+
+  getUpdatedPlaylists() {
     if (this.props.spotify.accessToken) {
       this.props.spotify.getMyPlaylists()
       .then(response => {
-        console.log(response);
         if (response.length) {
           this.setState({
             myPlaylists: response
@@ -31,16 +41,22 @@ class PlaylistBox extends React.Component {
     }
   }
 
+  handlePlaylistNameChange(event) {
+    this.setState({ playlistName: event.target.value });
+  }
+
   handleRemoveTracksFromPlaylist(trackObject) {
     const currentNewPlaylist = this.props.newPlaylist.filter(track => trackObject.id !== track.id);
     this.props.updatePlaylist(currentNewPlaylist);
   }
 
-  handleSaveSpotifyPlaylist(newPlaylistName) {
-    this.setState({
-      saveInProgress: true
-    });
-    this.props.spotify.postPlaylist(newPlaylistName, this.props.userId, this.props.newPlaylist)
+  handleSaveSpotifyPlaylist() {
+    console.log(this.state.saveButton);
+    if (this.state.saveButton === 'UPDATE PLAYLIST') {
+      this.setState({
+        saveInProgress: true
+      });
+      this.props.spotify.postUpdatePlaylist(this.state.selectedPlaylist.id, this.props.userId, this.props.newPlaylist)
       .then(response => {
         // response = 'success'
         // OR response = error object { error: [Object] }
@@ -48,18 +64,69 @@ class PlaylistBox extends React.Component {
           this.setState({
             saveInProgress: false
           });
+          this.props.updatePlaylist([]);
+          // GET udpated playlists from Spotify API
+          this.getUpdatedPlaylists();
         }
       })
+    } else {
+      this.setState({
+        saveInProgress: true
+      });
+      this.props.spotify.postPlaylist(this.state.playlistName, this.props.userId, this.props.newPlaylist)
+      .then(response => {
+        // response = 'success'
+        // OR response = error object { error: [Object] }
+        if (response === 'success') {
+          this.setState({
+            saveInProgress: false
+          });
+          this.props.updatePlaylist([]);
+          // GET udpated playlists from Spotify API
+          this.getUpdatedPlaylists();
+        }
+      })
+    }
+  }
+
+  handleShowNewPlaylist() {
+    if (!this.state.newPlaylistVisible) {
+      this.setState({
+        myPlaylistVisible: false,
+        newPlaylistVisible: true,
+        playlistViewButton: 'MY PLAYLISTS',
+        playlistName: ''
+      });
+    } else {
+      this.setState({
+        myPlaylistVisible: true,
+        newPlaylistVisible: false,
+        playlistViewButton: 'NEW PLAYLIST',
+        saveButton: 'SAVE PLAYLIST'
+      });
+    }
+  }
+
+  handleSelectedPlaylist(playlistProp) {
+    this.setState({
+      myPlaylistVisible: false,
+      newPlaylistVisible: true,
+      playlistViewButton: 'MY PLAYLISTS',
+      playlistName: playlistProp.name,
+      saveButton: 'UPDATE PLAYLIST'
+    });
   }
 
   render() {
-    let aValue = 'SAVE PLAYLIST';
+    let saveButton = this.state.saveButton;
     if (this.state.saveInProgress) {
-      aValue = (<PulseLoader color={'#FF0000'} />);
+      saveButton = (<PulseLoader color={'#FF0000'} />);
     };
     return (
       <div className="PlaylistBox">
         <NewPlaylist
+          playlistName={this.state.playlistName}
+          playlistNameChange={this.handlePlaylistNameChange}
           savePlaylist={this.handleSaveSpotifyPlaylist}
           newPlaylist={this.props.newPlaylist}
           removeTracksFromPlaylist={this.handleRemoveTracksFromPlaylist}
@@ -69,15 +136,16 @@ class PlaylistBox extends React.Component {
         <MyPlaylists
           myPlaylistVisible={this.state.myPlaylistVisible}
           myPlaylists={this.state.myPlaylists}
+          selectedPlaylist={this.handleSelectedPlaylist}
         />
         <div className="PlaylistBox__buttons">
           <a
             className="PlaylistBox__save"
-            onClick={() => {}}>NEW PLAYLIST
+            onClick={this.handleShowNewPlaylist}>{this.state.playlistViewButton}
           </a>
           <a
             className="PlaylistBox__save"
-            onClick={() => {}}>{aValue}
+            onClick={this.handleSaveSpotifyPlaylist}>{saveButton}
           </a>
         </div>
       </div>

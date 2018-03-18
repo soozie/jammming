@@ -102,30 +102,34 @@ class Spotify {
       const playlistId = jsonResponse.id;
       console.log(playlistId);
 
-      return fetch(`https://api.spotify.com/v1/users/${userId}/playlists/${playlistId}/tracks`, {
-        method: "POST",
-        body: JSON.stringify({
-          uris: tracks.map(track => {
-            return track.uri;
-          })
-        }),
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + this._accessToken
-        }
-      }).then(response => { return response.json(); })
-        .then(jsonResponse => {
-          console.log('!');
-          return 'success';
-        })
-        .catch(error => { return error; });
-      })
-      .catch(error => {
-        console.log(error);
-        return error;
-      });
+      return this.postUpdatePlaylist(playlistId, userId, tracks);
+    })
+    .catch(error => {
+      console.log(error);
+      return error;
+    });
   }
 
+  postUpdatePlaylist(playlistId, userId, tracks) {
+    return fetch(`https://api.spotify.com/v1/users/${userId}/playlists/${playlistId}/tracks`, {
+      method: "POST",
+      body: JSON.stringify({
+        uris: tracks.map(track => {
+          return track.uri;
+        })
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this._accessToken
+      }
+    })
+    .then(response => { return response.json(); })
+    .then(jsonResponse => {
+      console.log('!');
+      return 'success';
+    })
+    .catch(error => { return error; });
+  }
 }
 
 export default Spotify;

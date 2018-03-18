@@ -1,4 +1,5 @@
 import React from 'react';
+import './Track.css';
 
 class Track extends React.Component {
   constructor(props) {
@@ -25,11 +26,11 @@ class Track extends React.Component {
     const albumTrack = this.props.trackProp.album.name;
     return(
       <div className="Track">
-        <div className="Track-information">
+        <div className="Track__information">
           <h3>{titleTrack}</h3>
           <p>{`${artistTrack} | ${albumTrack}`}</p>
         </div>
-        <a className="Track-action" onClick={this.handleAddRemoveTrack}>
+        <a className="Track__action" onClick={this.handleAddRemoveTrack}>
           {aValue}
         </a>
       </div>

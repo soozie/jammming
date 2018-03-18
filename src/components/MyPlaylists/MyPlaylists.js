@@ -12,8 +12,14 @@ class MyPlaylists extends React.Component {
   }
 
 // display playlists of user after log-in
-  displayPlaylistsList() {
-
+  displayPlaylistsList(playlist) {
+    return (
+      <Playlist
+        playlistProp={playlist}
+        key={playlist.id}
+        selectedPlaylist={this.props.selectedPlaylist}
+      />
+    )
   }
 
 
@@ -25,15 +31,10 @@ class MyPlaylists extends React.Component {
     return (
       <div className={`MyPlaylist ${hiddenClassName}`}>
         <h1>My Playlists</h1>
-        <div className="MyPlaylistsContainer">
+        <div className="MyPlaylists__container">
           {
             this.props.myPlaylists.map(playlist => {
-              return (
-                <Playlist
-                  playlistProp={playlist}
-                  key={playlist.id}
-                />
-              )
+              return this.displayPlaylistsList(playlist);
             })
           }
         </div>

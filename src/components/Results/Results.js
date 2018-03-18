@@ -1,5 +1,6 @@
 import React from 'react';
 import Track from '../Track/Track.js';
+import './Results.css';
 
 class Results extends React.Component {
   constructor(props) {
@@ -24,9 +25,9 @@ class Results extends React.Component {
 
   render() {
     return (
-      <div className="SearchResults">
+      <div className="Results">
         <h2>Results</h2>
-        <div className="TrackList">
+        <div className="Results__trackList">
           {
             this.props.searchResults.map(track => {
               return (
