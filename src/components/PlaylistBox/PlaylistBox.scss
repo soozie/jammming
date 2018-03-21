@@ -1,16 +1,24 @@
+$cl-cream: #EDECE3;
+$cl-black: #11151C;
+$cl-light: #FCF9F7;
+$cl-orange: #D65237;
+
 html {
   body {
     #root {
       .PlaylistBox {
+        align-items: center;
+        background-color: transparent;
+        border: 1px solid $cl-orange;
+        border-radius: 54px;
+        box-shadow: 0 4px 2px 2px $cl-light;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        overflow-y: scroll;
-        width: 37%;
         max-height: 950px;
+        min-height: 400px;
+        overflow-y: scroll;
         padding: 2.27rem 1.16rem;
-        background-color: rgba(1, 12, 63, 0.7);
-        box-shadow: 0 4px 2px 2px #000000;
+        width: 37%;
 
         &__buttons {
           display: flex;
@@ -22,17 +30,18 @@ html {
 
         &__save {
           cursor: pointer;
-          width: 10rem;
-          padding: .77rem 0;
+          background-color: transparent;
+          border: 1px solid $cl-orange;
           border-radius: 54px;
-          margin-top: 1.27rem;
-          background-color: #6c41ec;
-          text-align: center;
           font-size: .83rem;
+          margin-top: 1.27rem;
+          padding: .77rem 0;
+          text-align: center;
           transition: background-color .25s;
+          width: 10rem;
 
           &:hover {
-            background-color: rgba(108, 65, 233, .7);
+            background-color: $cl-orange;
           }
 
           &:active {

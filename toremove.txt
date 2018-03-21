@@ -1,0 +1,1625 @@
+    1  gst
+    2  glol
+    3  glola
+    4  gst
+    5  gv
+    6  grv
+    7  gfa
+    8  gup
+    9  gup div-position
+   10  git push --force origin div-position 
+   11  lsa
+   12  cd div-position
+   13  lsa
+   14  ..
+   15  .
+   16  brew
+   17  brew list
+   18  brew doctor
+   19  brew prune
+   20  brew doctor
+   21  brew instal nginx
+   22  sudo nginx
+   23  cd /usr/local/var/www
+   24  ls -la
+   25  atom index.html
+   26  ls -la
+   27  vim .zshrc
+   28  atom index.html
+   29  pwd
+   30  cd /usr/local/var/www
+   31  atom index.html
+   32  atom
+   33  cd
+   34  vim .zshrc
+   35  atom
+   36  open -a Atom
+   37  open -a Atom .zshrc
+   38  atom .zshrc
+   39  cd /usr/local/var/www
+   40  atom index.html
+   41  sudo atom index.html
+   42  open -a Atom index.html
+   43  atom .
+   44  sudo atom index.html
+   45  sudo open -a "Atom" index.html
+   46  cd /usr/local/etc/nginx
+   47  lsa
+   48  atom nginx.conf
+   49  sudo chown -R `whoami` ~/.atom
+   50  atom nginx.conf
+   51  cd /usr/local/etc/nginx
+   52  lsa
+   53  atom .
+   54  pwd
+   55  sudo nginx -s stop
+   56  mv /usr/local/etc/nginx/nginx.conf /usr/local/etc/nginx/nginx.conf.bak && cp /usr/local/etc/nginx/nginx.conf.bak /usr/local/etc/nginx/nginx.conf
+   57  mkdir /usr/local/etc/nginx/conf.d
+   58  vim /usr/local/etc/nginx/conf.d/max.conf
+   59  cd projects
+   60  mkdir max
+   61  cd max
+   62  yarn
+   63  yarn add create-react-app --global
+   64  create-react-app
+   65  npm install -g create-react-app
+   66  pr
+   67  cd projects
+   68  create-react-app max
+   69  cd max
+   70  yarn start
+   71  projects/max
+   72  pwd
+   73  sudo ngnix
+   74  sudo nginx
+   75  sass
+   76  brew install sass
+   77  brew install scss
+   78  scss
+   79  sass
+   80  sudo gem install sass
+   81  ls -la
+   82  cd src
+   83  ls -la
+   84  mv App.css App.scss
+   85  ls -la
+   86  sass App.scss
+   87  ls -la
+   88  sass App.scss App.css
+   89  ls -la
+   90  sass App.scss App.css
+   91  yarn build
+   92  mkdir webapps
+   93  cd webapps
+   94  cd build
+   95  ls -la
+   96  mkdir max
+   97  mv asset-manifest.json /Users/susie/webapps/max
+   98  mv favicon.ico /Users/susie/webapps/max
+   99  mv index.html /Users/susie/webapps/max
+  100  mv manifest.json /Users/susie/webapps/max
+  101  mv static /Users/susie/webapps/max
+  102  mv service-worker.js /Users/susie/webapps/max
+  103  sudo vim /etc/hosts
+  104  cd /usr/local/etc/nginx
+  105  ls -la
+  106  cd conf.d
+  107  ls -la
+  108  vim max.conf
+  109  sudo vim /etc/hosts
+  110  vim max.conf
+  111  cd
+  112  ls -la
+  113  cd webapps
+  114  ls -la
+  115  cd max
+  116  pwd
+  117  sudo nginx -s reload
+  118  cd
+  119  cd projects
+  120  max
+  121  ls -la
+  122  yarn start
+  123  ls -la
+  124  git init
+  125  git branch
+  126  git remote add origin git@github.com:soozie/aqvarivm.git
+  127  git remote -v
+  128  cd ..
+  129  cd
+  130  cd projects/
+  131  mv max aqvarivm
+  132  cd aqvarivm
+  133  git status
+  134  atom.
+  135  open -a "Atom" .
+  136  git status
+  137  git add *
+  138  git status
+  139  rm src/.sass-cache/892be9cae120216823e1299622a46877578daa31/App.scssc
+  140  git status
+  141  rm src/App.css.map
+  142  git status
+  143  git commit
+  144  git config --global user.name
+  145  git commit --amend --reset-author
+  146  git log
+  147  git status
+  148  git checkout src/.sass-cache/892be9cae120216823e1299622a46877578daa31/App.scssc
+  149  git status
+  150  git checkout src/App.css.map
+  151  git status
+  152  git push origin master
+  153  ls -al ~/.ssh\n
+  154  ssh-keygen -t rsa -b 4096 -C "susanna.zandonai@gmail.com"\n
+  155  ls -al ~/.ssh\n
+  156  pbcopy < ~/.ssh/id_rsa.pub\n
+  157  git push origin master
+  158  git status
+  159  git log
+  160  git fetch --all
+  161  git log
+  162  git status
+  163  git remote -v
+  164  git pull origin master
+  165  git log
+  166  cd src
+  167  ls -la
+  168  sass App.scss App.css
+  169  cd ..
+  170  yarn start
+  171  cd projects
+  172  cd aqvarivm
+  173  sass src/App.scss src/App.css
+  174  git status
+  175  vim git ignore
+  176  lsa
+  177  git
+  178  less git
+  179  lds
+  180  lsa
+  181  gst
+  182  rm git
+  183  vim .gitignore
+  184  git status
+  185  yarn start
+  186  git add *
+  187  git commit
+  188  git status
+  189  git log
+  190  git push origin master
+  191  yarn start
+  192  cd projects/aqvarivm
+  193  sass src/App.scss src/App.css
+  194  gst
+  195  gca
+  196  git push origin master
+  197  sass src/App.scss src/App.css && sass src/components/Header/Header.scss src/components/Header/Header.css
+  198  yarn start
+  199  cd projects/aqvarivm/
+  200  sass src/App.scss src/App.css && sass src/components/Header/Header.scss src/components/Header/Header.css
+  201  gst
+  202  cd
+  203  ngix
+  204  nginx
+  205  sudo nginx -s reload
+  206  cd /usr/local/etc/nginx
+  207  lsa
+  208  cd conf.d
+  209  lsa
+  210  vim /etc/hosts
+  211  sudo vim /etc/hosts
+  212  less
+  213  less max.conf
+  214  cp max.conf codecademy.conf
+  215  vim codecademy.conf
+  216  cd
+  217  lsa
+  218  cd projects/dasmotoarts
+  219  pwd
+  220  lsa
+  221  sudo nginx -s reload
+  222  nginx
+  223  sudo nginx
+  224  sudo vim /etc/hosts
+  225  sudo nginx
+  226  sudo nginx -s reload
+  227  cd
+  228  cd projects/aqvarivm
+  229  lsa
+  230  git remote -v
+  231  git fetch origin
+  232  git pull origin master
+  233  git log
+  234  git reset --hard
+  235  git status
+  236  rm -rf src/components
+  237  git status
+  238  git checkout -b
+  239  git checkout -b master2 origin/master
+  240  git log
+  241  git checkout master
+  242  git branch -m master master3
+  243  git branch -m master2 master
+  244  git log
+  245  git checkout master
+  246  git branch -D master3
+  247  git branch
+  248  git log
+  249  yarn install
+  250  brew upgrade yarn
+  251  yarn start
+  252  git pull origin master
+  253  yarn start
+  254  cd
+  255  pwd
+  256  cd projects
+  257  pwd
+  258  ls -la
+  259  mkdir git_practice
+  260  ls -la
+  261  pwd
+  262  cd git_practice
+  263  git init
+  264  echo "Hello Git and GitHub" >> README.txt
+  265  gst
+  266  git add README.txt
+  267  git commit -m "First commit"
+  268  pwd
+  269  git status
+  270  git remote add origin https://github.com/soozie/git_practice.git\ngit push -u origin master
+  271  git push origin master
+  272  git remote -v
+  273  cd
+  274  pwd
+  275  cd projects
+  276  mkdir Excursion
+  277  pwd
+  278  ls -la
+  279  cd Excursion
+  280  touch index.html
+  281  mkdir resources
+  282  cd resources
+  283  mkdir css
+  284  cd css
+  285  touch style.css
+  286  cd ..
+  287  clear
+  288  git init
+  289  rm -rf .git
+  290  lsa
+  291  cd ..
+  292  mv Excursion excursion
+  293  cd excursion
+  294  git init
+  295  git status
+  296  git add *
+  297  alias
+  298  alias | grep commit
+  299  gcmsg 'first commit'
+  300  gst
+  301  git remote add origin https://github.com/soozie/excursion.git
+  302  git push -u origin master
+  303  git status
+  304  git add *
+  305  git diff
+  306  git commit -m 'Add boilerplate html and title + css'
+  307  sudo /etc/hosts
+  308  sudo vim /etc/hosts
+  309  clear
+  310  cd
+  311  cd projects
+  312  lsa
+  313  mkdir mytimes
+  314  lsa
+  315  cd mytimes
+  316  touch index.html
+  317  mkdir css
+  318  cd css
+  319  touch style.css
+  320  lsa
+  321  cd ..
+  322  lsa
+  323  cd
+  324  cd projects
+  325  lsa
+  326  mkdir teacozy
+  327  lsa
+  328  cd teacozy
+  329  touch index.html
+  330  mkdir css
+  331  mkdir images
+  332  cd css
+  333  touch style.css
+  334  lsa
+  335  ..
+  336  lsa
+  337  ..
+  338  atom index.html
+  339  cd teacozy
+  340  atom index.html
+  341  clear
+  342  ..
+  343  lsa
+  344  mkdir exercises
+  345  cd exercises
+  346  lsa
+  347  touch README.md
+  348  git init 
+  349  gst
+  350  git add README.md
+  351  gst
+  352  git commit -m 'first commit'
+  353  git remote add origin https://github.com/soozie/exercises.git
+  354  git push -u origin master
+  355  gst
+  356  clear
+  357  ..
+  358  lsa
+  359  cd projects
+  360  cd exercises
+  361  lsa
+  362  mv beachParadise exercises
+  363  lsa
+  364  gst
+  365  git add beachParadise
+  366  gst
+  367  git commit -m 'first css exercise'
+  368  gst
+  369  clear
+  370  git push origin
+  371  gst
+  372  mv blogparis exercises
+  373  lsa
+  374  gst
+  375  git add blogparis
+  376  gst
+  377  git commit -m 'css exercise blog'
+  378  git push origin 
+  379  gst
+  380  clear
+  381  mv mytimes exercises
+  382  lsa
+  383  mv teacozy exercises
+  384  gst
+  385  git add mytimes
+  386  git commit -m 'display and position css exercise - journal'
+  387  git add teacozy
+  388  git commit -m 'flexbox & box model css exercise - store'
+  389  clear
+  390  gst
+  391  git log
+  392  git push origin 
+  393  lsa
+  394  git status
+  395  git add *
+  396  git status
+  397  git commit -m 'flexbox & box model css exercise - store - finished'
+  398  git status
+  399  git push origin
+  400  cd
+  401  cd projects
+  402  lsa
+  403  cd aqvarivm
+  404  gst
+  405  git reset -- hard
+  406  gst
+  407  git reset --hard
+  408  gst
+  409  git fetch --all
+  410  git pull --rebase origin master
+  411  yarn install
+  412  yarn start
+  413  cd projects
+  414  lsa
+  415  https://github.com/soozie/prj-rev-bwfs-dasmoto.git
+  416  git clone https://github.com/soozie/prj-rev-bwfs-dasmoto.git
+  417  cd prj-rev-bwfs-dasmoto
+  418  git status
+  419  git log
+  420  git remote -v
+  421  gst
+  422  git commit -m 'character changed'
+  423  git push origin master
+  424  gst
+  425  git commit --amend\n
+  426  gst
+  427  git log
+  428  git push --force origin master
+  429  cd projects
+  430  cd prj-rev-bwfs-dasmoto
+  431  lsa
+  432  cd dasmo
+  433  cd dasmotoarts
+  434  cd resources
+  435  mkdir images
+  436  lsa
+  437  mv pattern.jpeg images
+  438  lsa
+  439  lsa images
+  440  ..
+  441  git status
+  442  git add *
+  443  gst
+  444  gc -m 'Save images locally #2' && git push origin master
+  445  clear
+  446  cd
+  447  cd projects
+  448  cd secret-agent-supply
+  449  touch index.html
+  450  mkdir resources
+  451  cd resources
+  452  mkdir css
+  453  cd css
+  454  touch style.css
+  455  cd ..
+  456  cd re
+  457  cd resources
+  458  mkdir images
+  459  lsa
+  460  cd ..
+  461  lsa
+  462  cd exercises
+  463  git status
+  464  git add *
+  465  gst
+  466  git commit -m 'CSS exercise mdeia queries'
+  467  gst
+  468  git push origin master
+  469  git commit --amend
+  470  git push --force-with-lease origin master
+  471  clear
+  472  cd
+  473  cd projects
+  474  lsa
+  475  cd exercises
+  476  mkdir optic-tortoiseshell
+  477  lsa
+  478  cd optic-tortoiseshell
+  479  touch index.html
+  480  mkdir css
+  481  mkdir images
+  482  cd css
+  483  touch style.css
+  484  cd ..
+  485  lsa
+  486  clear
+  487  cd ..
+  488  git status
+  489  git add optic-tortoiseshell
+  490  git commit -m 'exercise media query, done html and style only'
+  491  git push origin master
+  492  gst
+  493  git add *
+  494  gst
+  495  git commit -m 'finished project/exercise media queries'
+  496  git push origin master
+  497  gst
+  498  cd
+  499  cd projects
+  500  lsa
+  501  mkdir fotomatic
+  502  cd fotomatic
+  503  cd
+  504  clear
+  505  killal Finder
+  506  killall Finder
+  507  sudo killall Finder
+  508  find --help
+  509  find -H
+  510  find / -type f -name "*.ai"
+  511  open -a "Adobe Illustrator" /Users/susie/Desktop/SUSANNA/IMPORTANT/CREATIVE_ENG_CV.ai
+  512  open -a "Adobe Illustrator" /Users/susie/Desktop/SUSANNA/PRIVATE/Senza\ titolo-1.ai
+  513  clear
+  514  cd projects
+  515  cd colmaracademy
+  516  mkdir resources
+  517  cd resources
+  518  mkdir css
+  519  cd css
+  520  touch style.css
+  521  cd ..
+  522  pwd
+  523  lsa
+  524  touch index.html
+  525  open -a  "Atom"
+  526  cd
+  527  apm
+  528  cd projects
+  529  cd
+  530  cd Applications
+  531  lsa
+  532  cd
+  533  lsa
+  534  cd ..
+  535  lsa
+  536  cd Applications
+  537  cd Atom.app
+  538  lsa
+  539  cd Contents
+  540  lsa
+  541  cd ..
+  542  atom --safe
+  543  atom open --fresh
+  544  lsa
+  545  cd Applications
+  546  lsa
+  547  ..
+  548  subl .zshrc
+  549  open -a "Sublime Text" .zshrc
+  550  lsa
+  551  projects/exercises
+  552  lsa
+  553  colmaracademy
+  554  lsa
+  555  cdr
+  556  lsa
+  557  lsa resources
+  558  lsa resources/css
+  559  scss resources/css/style.scss resources/css/style.css
+  560  curl https://fonts.googleapis.com/css\?family\=Muli:200,300,400,600,700,800 | grep "/* latin */"
+  561  wget https://fonts.googleapis.com/css\?family\=Muli:200,300,400,600,700,800 | grep "/* latin */"
+  562  lsa
+  563  scss resources/css/style.scss resources/css/style.css
+  564  clear
+  565  scss resources/css/style.scss resources/css/style.css
+  566  clear
+  567  scss resources/css/style.scss resources/css/style.css
+  568  clear
+  569  scss resources/css/style.scss resources/css/style.css
+  570  cd projects
+  571  lsa
+  572  cd exercises
+  573  lsa
+  574  cd col
+  575  cd colmaracademy
+  576  git init
+  577  gst
+  578  lsa
+  579  git add capstone_colmar_assets index.html resources
+  580  gst
+  581  touch .gitignore
+  582  vim .gitignore
+  583  gst
+  584  vim .gitignore
+  585  gst
+  586  git commit
+  587  git remote -v
+  588  git remote add origin https://github.com/soozie/colmaracademy.git
+  589  git remote -v
+  590  git push -u origin master
+  591  gst
+  592  git log
+  593  scss resources/css/style.scss resources/css/style.css
+  594  clear
+  595  scss resources/css/style.scss resources/css/style.css
+  596  clear
+  597  scss resources/css/style.scss resources/css/style.css
+  598  gst
+  599  vim .gitignore
+  600  gst
+  601  vim .gitignore
+  602  gst
+  603  vim .gitignore
+  604  gst
+  605  vim .gitignore
+  606  gst
+  607  vim .gitignore
+  608  gst
+  609  vim .gitignore
+  610  gst
+  611  vim .gitignore
+  612  gst
+  613  touch aaa.map
+  614  gst
+  615  lsa
+  616  rm aaa.map
+  617  vim .gitignore
+  618  pwd
+  619  lsa
+  620  gst
+  621  vim .gitignore
+  622  gst
+  623  vim .gitignore
+  624  gst
+  625  vim .gitignore
+  626  gst
+  627  vim .gitignore
+  628  gst
+  629  vim .gitignore
+  630  gst
+  631  vim .gitignore
+  632  gst
+  633  vim .gitignore
+  634  gst
+  635  vim .gitignore
+  636  gst
+  637  vim .gitignore
+  638  gst
+  639  vim .gitignore
+  640  gst
+  641  git --version
+  642  vim .gitignore
+  643  gst
+  644  brew upgrade git
+  645  vim .gitignore
+  646  gst
+  647  rm resources/css/style.css.map
+  648  gst
+  649  git remove resources/css/style.css.map
+  650  git rm resources/css/style.css.map
+  651  gst
+  652  git add *
+  653  gst
+  654  git commit
+  655  gst
+  656  git push origin master
+  657  gst
+  658  scss resources/css/style.scss resources/css/style.css
+  659  cd ..
+  660  cd
+  661  cd Downloads
+  662  lsa
+  663  ls | grep font-avv
+  664  ls | grep font-aw
+  665  open font-awesome-4.7.0.zip
+  666  cp font-awesome-4.7.0/css/font-awesome.css /Users/susie/projects/exercises/colmaracademy/resources/css
+  667  lsa
+  668  cd resources
+  669  lsa
+  670  cd css
+  671  lsa
+  672  cp font-awesome-4.7.0/css/font-awesome.min.css /Users/susie/projects/exercises/colmaracademy/resources/css
+  673  lsa
+  674  rm font-awesome.css
+  675  lsa
+  676  scss resources/css/style.scss resources/css/style.css
+  677  cd 
+  678  cd projects/exercises/colmaracademy
+  679  scss resources/css/style.scss resources/css/style.css
+  680  sudo killall VDCAssistant
+  681  sudo killall AppleCameraAssistant
+  682  scss resources/css/style.scss resources/css/style.css
+  683  clear
+  684  scss resources/css/style.scss resources/css/style.css
+  685  clear
+  686  scss resources/css/style.scss resources/css/style.css
+  687  cd pr
+  688  cd exercises
+  689  cd colmaracademy
+  690  gst
+  691  git add *
+  692  gst
+  693  git commit
+  694  git commit -m 'added last 2 section of CSS plus details -last commit'
+  695  gst
+  696  git push origin master
+  697  gst
+  698  cd projects/blog-photo
+  699  touch index.html
+  700  mkdir css
+  701  mkdir images
+  702  cd css
+  703  touch main.css
+  704  cd
+  705  cd projects
+  706  cd michela
+  707  cd src
+  708  lsa
+  709  scss App.scss App.css
+  710  yarn start
+  711  scss App.scss App.css
+  712  cd projects/michela/src
+  713  lsa
+  714  scss App.scss App.css
+  715  scss App.scss App.css+
+  716  scss App.scss App.css
+  717  clear
+  718  yarn add jquery
+  719  .
+  720  ..
+  721  yarn start
+  722  scss src/App.scss src/App.css
+  723  cd lib/Crossword/
+  724  lsa
+  725  cd js
+  726  lsa
+  727  less script.js
+  728  ..
+  729  pwd
+  730  ..
+  731  cd michela
+  732  scss src/App.scss src/App.css
+  733  clear
+  734  lsa
+  735  git status
+  736  cd
+  737  cd projects/michelasbirthday
+  738  git init
+  739  gst
+  740  cd projects/michelasbirthday
+  741  gst
+  742  git add *
+  743  gst
+  744  cd projects/michelasbirthday
+  745  git add *
+  746  git commit
+  747  gst
+  748  git remote add origin https://github.com/soozie/michelasbirthday.git
+  749  git push -u origin master
+  750  yarn run bundle
+  751  lsa
+  752  yarn bundle
+  753  yarn publish
+  754  lsa
+  755  cat package.json
+  756  yarn run build
+  757  lsa
+  758  ..
+  759  lsa
+  760  cp michelasbirthday michelasbirthday2
+  761  cp -r michelasbirthday michelasbirthday2
+  762  cd michelasbirthday
+  763  lsa
+  764  rm README.md
+  765  rm -rf node_modules
+  766  rm -rf src
+  767  lsa
+  768  cd build
+  769  lsa
+  770  ..
+  771  lsa
+  772  rm -rf public
+  773  lsa
+  774  mv build/* .
+  775  rm -rf build
+  776  lsa
+  777  vim package.json
+  778  gst
+  779  git add .
+  780  gst
+  781  git commit -m "Test prod"
+  782  gst
+  783  git log
+  784  git push
+  785  lsa
+  786  git log
+  787  git reset --hard b8db76ac3fce3381ec4a1793b54f2c69d66d085a
+  788  gst
+  789  git log
+  790  lsa
+  791  ..
+  792  mkdir michelaweb
+  793  toch index.html
+  794  touch index.html
+  795  touch style.scss
+  796  mkdir resources
+  797  mkdir lib
+  798  lsa
+  799  mv index.html michelaweb
+  800  mv style.scss michelaweb
+  801  lsa
+  802  mv resources michelaweb
+  803  mv lib michelaweb
+  804  lsa
+  805  cd michelaweb
+  806  lsa
+  807  cd lib
+  808  lsa
+  809  ..
+  810  cd michelasbirthday2
+  811  lsa
+  812  cd public
+  813  lsa
+  814  ..
+  815  src
+  816  lsa
+  817  ..
+  818  cd michelasbirthday2
+  819  cp -r src/images ../michelaweb
+  820  ..
+  821  lsa
+  822  cd michelaweb
+  823  lsa
+  824  cp /Users/susie/Downloads/jquery-3.2.1.min.js lib
+  825  scss style.scss style.css
+  826  cd ..
+  827  cd michelasbirthday
+  828  lsa
+  829  rm -rf *
+  830  lsa
+  831  rm README.md
+  832  rm -rf public
+  833  rm -rf src
+  834  rm yarn.lock
+  835  lsa
+  836  mv ../michelaweb/* .
+  837  lsa
+  838  gst
+  839  git add .
+  840  gst
+  841  rm -rf lib/Crossword
+  842  gst
+  843  git rm lib/Crossword
+  844  gst
+  845  git commit -m "Test Github io"
+  846  gst
+  847  git push --force
+  848  lsa
+  849  rm package.json
+  850  lsa
+  851  gst
+  852  gca
+  853  gst
+  854  gca
+  855  git push 
+  856  cd
+  857  clear
+  858  cd projects/matchGame
+  859  git init
+  860  gst
+  861  git add *
+  862  gst
+  863  git commit -m 'html & css done, first part of js logic'
+  864  gst
+  865  git remote add origin https://github.com/soozie/matchGame.git
+  866  git push -u origin master
+  867  gst
+  868  git add *
+  869  gst
+  870  git commit -m 'last commit, ended logic js'
+  871  git push origin master
+  872  gst
+  873  sudo killall AppleCameraAssistant
+  874  sudo killall AppleCameraAssistant;
+  875  sudo killall AppleCameraAssistant
+  876  sudo killall VDCAssistant
+  877  cd pr
+  878  cd projects
+  879  cd broadway
+  880  mkdir css
+  881  touch index.html
+  882  cd css
+  883  touch style.css
+  884  cd ..
+  885  git status
+  886  git add *
+  887  git commit -m 'uploaded all old remaining exercises of this class'
+  888  gst
+  889  git rm colmaracademy
+  890  gst
+  891  git commit -m 'uploaded all old remaining exercises of this class'
+  892  gst
+  893  git push
+  894  gst
+  895  clear
+  896  cd
+  897  brew doctor
+  898  xcode-select --install
+  899  brew doctor
+  900  brew install node
+  901  clear
+  902  node
+  903  cd projects
+  904  lsa
+  905  mkdir minesweeper
+  906  cd minesweeper
+  907  mkdir src
+  908  cd src
+  909  touch minesweeper.js
+  910  clear
+  911  vim minesweeper.js
+  912  node minesweeper.js
+  913  vim minesweeper.js
+  914  node minesweeper.js
+  915  cd
+  916  cd /
+  917  find . -type d | grep celest
+  918  sudo find . -type d | grep celest
+  919  sudo find . -type d | grep Celest
+  920  clear
+  921  cd
+  922  cd projects
+  923  lsa
+  924  cd pizzaOrder
+  925  touch pizzaOrder.js
+  926  cd ..
+  927  mkdir weatherCaluclator
+  928  cd weatherCaluclator
+  929  touch weatherCaluclator.js
+  930  cd ..
+  931  mkdir dogYears
+  932  cd dogYears
+  933  touch dogYears.js
+  934  cd ..
+  935  lsa
+  936  mkdir arrayExercise
+  937  cd arrayExercise
+  938  touch arraysMethods.js
+  939  cd ..
+  940  cd minesweeper
+  941  git init
+  942  clear
+  943  git add *
+  944  git commit -m 'first commit'
+  945  touch .gitignore
+  946  gst
+  947  git add .gitignore
+  948  vim .gitignore
+  949  gst
+  950  vim .gitignore
+  951  gst
+  952  git commit -m 'added .gitignore'
+  953  git remote add origin https://github.com/soozie/minesweeper.git
+  954  git push -u origin master
+  955  lsa
+  956  cd ..
+  957  cd minesweeper/src
+  958  node minesweeper.js
+  959  cd projects
+  960  lsa
+  961  cd mine
+  962  cd minesweeper
+  963  pwd
+  964  cd src
+  965  node minesweeper.js
+  966  cd..
+  967  cd ..
+  968  cd 
+  969  cd projects
+  970  lsa 
+  971  cd wix-michele
+  972  lsa
+  973  mkdir src
+  974  cd src
+  975  touch index.html
+  976  cd ..
+  977  cd colmaracademy
+  978  lsa
+  979  atom index.html
+  980  cd ..
+  981  lsa
+  982  mkdir whaleTalks
+  983  cd whaleTalks
+  984  touch whaleTalks.js
+  985  open whaleTalks.js
+  986  cd ..
+  987  echo "# learning-Javascript-exercises" >> README.md
+  988  lsa
+  989  cd learning-Javascript-exercises
+  990  lsa
+  991  git init
+  992  vim README.md
+  993  git git remote add origin https://github.com/soozie/learning-Javascript-exercises.git
+  994  git remote add origin https://github.com/soozie/learning-Javascript-exercises.git
+  995  gst
+  996  git add *
+  997  gst
+  998  git commit -m "first commit"
+  999  git push -u origin master
+ 1000  git remote add origin https://github.com/soozie/learning-Javascript-exercises.git
+ 1001  git init
+ 1002  gst
+ 1003  git add *
+ 1004  gst
+ 1005  cd ..
+ 1006  cd learning-Javascript-exercises
+ 1007  lsa
+ 1008  gst
+ 1009  git remote add origin https://github.com/soozie/learning-Javascript-exercises.git
+ 1010  git push -u origin master
+ 1011  git remote add origin https://github.com/soozie/learning-Javascript-exercises.git
+ 1012  grv
+ 1013  gst
+ 1014  git log
+ 1015  git pull
+ 1016  git push -u origin master
+ 1017  git fetch
+ 1018  grv
+ 1019  lsa
+ 1020  gst
+ 1021  git remote show origin
+ 1022  git config --email
+ 1023  git config --get email
+ 1024  git config --global
+ 1025  git config --global user.email
+ 1026  git push
+ 1027  git push --set-upstream origin master
+ 1028  git remote remove origin
+ 1029  grv
+ 1030  git remote add origin https://github.com/soozie/learning-Javascript-exercises.git
+ 1031  gfa
+ 1032  lsa ~/.ssh
+ 1033  less ~/.ssh/id_rsa.pub
+ 1034  cd ..
+ 1035  lsa
+ 1036  cd learning-Javascript-exercises
+ 1037  lsa
+ 1038  git remote add origin https://github.com/soozie/learning-Javascript-exercises.git
+ 1039  grv
+ 1040  gst
+ 1041  git push -u origin master
+ 1042  lsa
+ 1043  rm -rf .git
+ 1044  gst
+ 1045  git init
+ 1046  gst
+ 1047  git add .
+ 1048  gst
+ 1049  git commit -m "first commit"
+ 1050  git remote add origin https://github.com/soozie/learning-Javascript-exercises.git
+ 1051  git push -u origin master
+ 1052  gst
+ 1053  rm -rf .git
+ 1054  lsa
+ 1055  git remote add origin https://github.com/soozie/learning-Javascript-exercises.git
+ 1056  git init
+ 1057  gst
+ 1058  git commit -m "first commit"
+ 1059  git remote add origin https://github.com/soozie/learning-Javascript-exercises.git
+ 1060  gst
+ 1061  git push -u origin master
+ 1062  git add .
+ 1063  gst
+ 1064  git commit -m 'exercises : arrays, loops, if/else'
+ 1065  git push -u origin master
+ 1066  rm -rf .git
+ 1067  git init
+ 1068  git add README.md
+ 1069  git commit -m "first commit"
+ 1070  git remote add origin https://github.com/soozie/learning-Javascript-exercises.git
+ 1071  git push -u origin master
+ 1072  git remote add origin git@github.com:soozie/learning-Javascript-exercises.git
+ 1073  rm -rf .git
+ 1074  git init
+ 1075  git add README.md
+ 1076  git commit -m "first commit"
+ 1077  git remote add origin git@github.com:soozie/learning-Javascript-exercises.git
+ 1078  git push -u origin master
+ 1079  git remote remove origin
+ 1080  grv
+ 1081  git remote add origin git@github.com:soozie/learning-Javascript-exercises.git
+ 1082  git push -u origin master
+ 1083  cat ~/.ssh/id_rsa.pub | pbcopy
+ 1084  pbcopy < ~/.ssh/id_rsa.pub
+ 1085  cat ~/.ssh/id_rsa.pub
+ 1086  git fetch
+ 1087  git push -u origin master
+ 1088  grv
+ 1089  git remote remove origin
+ 1090  grv
+ 1091  gst
+ 1092  git add .
+ 1093  gst
+ 1094  git log
+ 1095  git commit -m 'second commit'
+ 1096  git push -u origin master
+ 1097  grv
+ 1098  git remote add origin https://github.com/soozie/learning-Javascript-exercises.git
+ 1099  git push -u origin master
+ 1100  cd ..
+ 1101  cd minesweeper
+ 1102  git remote -v
+ 1103  git fetch
+ 1104  git ls-remote --tags --heads https://github.com/soozie/minesweeper.git/
+ 1105  git ls-remote --tags --heads 'https://github.com/soozie/minesweeper.git/'
+ 1106  brew doctor
+ 1107  git -C "/usr/local/Homebrew" remote add origin https://github.com/Homebrew/brew.git
+ 1108  ping github.com
+ 1109  brew install
+ 1110  brew install gettext libidn2 libunistring
+ 1111  cd projects
+ 1112  cd learning-Javascript-exercises
+ 1113  gst
+ 1114  grv
+ 1115  brew doctor
+ 1116  brew install gettext libidn2 libunistring
+ 1117  brew doctor
+ 1118  brew update
+ 1119  git push -u origin master
+ 1120  gst
+ 1121  cd ..
+ 1122  lsa
+ 1123  mkdir miniLint
+ 1124  cd miniLint
+ 1125  touch miniLint.js
+ 1126  lsa
+ 1127  cd ..
+ 1128  gst
+ 1129  git add miniLint
+ 1130  gst
+ 1131  git commit -m 'Javascript exercise mini linter version'
+ 1132  gst
+ 1133  git push origin master
+ 1134  gst
+ 1135  cd ..
+ 1136  cd minesweeper
+ 1137  cd src
+ 1138  node minesweeper.js
+ 1139  node
+ 1140  node minesweeper.js
+ 1141  clear
+ 1142  node minesweeper.js
+ 1143  clear
+ 1144  cd ..
+ 1145  gst
+ 1146  vim .gitignore
+ 1147  git add *
+ 1148  gst
+ 1149  git add .gitignore
+ 1150  gst
+ 1151  git commit -m 'implemented logic boards'
+ 1152  git push origin master
+ 1153  gst
+ 1154  cd src
+ 1155  lsa
+ 1156  node minesweeper.js
+ 1157  lsa
+ 1158  node minesweeper.js
+ 1159  cd ..
+ 1160  lsa
+ 1161  cd learning-Javascript-exercises
+ 1162  lsa
+ 1163  mkdir
+ 1164  mkdir elseif-switch
+ 1165  cd elseif-switch
+ 1166  touch magicEightBall
+ 1167  touch radeDay
+ 1168  cd ..
+ 1169  gst
+ 1170  git add .
+ 1171  gst
+ 1172  git commit -m 'javascript exercise use of if - else if - switch'
+ 1173  git push origin master
+ 1174  gst
+ 1175  cd ..
+ 1176  cd minesweeper
+ 1177  lsa
+ 1178  cd src
+ 1179  clear
+ 1180  node minesweeper.js
+ 1181  cd ..
+ 1182  cd learning-Javascript-exercises
+ 1183  lsa
+ 1184  mkdir objectExercise
+ 1185  cd objectExercise
+ 1186  touch mealMaker.js
+ 1187  lsa
+ 1188  touch teamStats.js
+ 1189  cd ..
+ 1190  mkdir classesExercise
+ 1191  cd classesExercise
+ 1192  touch class.js
+ 1193  touch hospitalEmployee.js
+ 1194  cd ..
+ 1195  cd minesweeper
+ 1196  cd src
+ 1197  node minesweeper.js
+ 1198  cd ..
+ 1199  gst
+ 1200  git add .
+ 1201  gst
+ 1202  git commit -m 'added class structure - need to debug and update'
+ 1203  git push origin master
+ 1204  gst
+ 1205  node minesweeper.js
+ 1206  clear
+ 1207  node minesweeper.js
+ 1208  cd src
+ 1209  node minesweeper.js
+ 1210  load minesweeper.js
+ 1211  node
+ 1212  clear
+ 1213  node minesweeper.js
+ 1214  node
+ 1215  clear
+ 1216  node
+ 1217  lsa
+ 1218  touch board.js
+ 1219  touch game.js
+ 1220  lsa
+ 1221  cd ..
+ 1222  lsa
+ 1223  npm init
+ 1224  lsa
+ 1225  npm install babel-cli -D
+ 1226  npm install babel-preset-env -D
+ 1227  touch .babelrc
+ 1228  vim .babelrc
+ 1229  vim package.json
+ 1230  cd src
+ 1231  lsa
+ 1232  pvd
+ 1233  pwd
+ 1234  mv minesweeper.js ../
+ 1235  cd ..
+ 1236  lsa
+ 1237  lsa src
+ 1238  npm run build
+ 1239  lsa
+ 1240  less lib/game.js
+ 1241  cd lib
+ 1242  node
+ 1243  lsa
+ 1244  clear
+ 1245  node
+ 1246  cd ..
+ 1247  npm run build
+ 1248  lib
+ 1249  clear
+ 1250  node
+ 1251  cd projects
+ 1252  cd minesweeper
+ 1253  gst
+ 1254  git add .
+ 1255  gst
+ 1256  vim .gitignore
+ 1257  git reset
+ 1258  gst
+ 1259  less .gitignore
+ 1260  git add .
+ 1261  gst
+ 1262  git commit -m 'completed minesweeper game logic 1.0.0 - play in terminal with node'
+ 1263  git push origin master
+ 1264  git push --force origin master
+ 1265  gst
+ 1266  ..
+ 1267  lsa
+ 1268  learning-Javascript-exercises
+ 1269  lsa
+ 1270  objectExercise
+ 1271  lsa
+ 1272  ..
+ 1273  classesExercise
+ 1274  lsa
+ 1275  touch buildLibrary.js
+ 1276  touch schoolCatalogue.js
+ 1277  ..
+ 1278  mkdir LearningReact
+ 1279  LearningReact
+ 1280  touch authorizationForm.js
+ 1281  ..
+ 1282  lsa
+ 1283  cd michelasbirthday
+ 1284  ..
+ 1285  cd michelasbirthday2
+ 1286  ..
+ 1287  lsa
+ 1288  learningJavascriptExercises
+ 1289  gst
+ 1290  ..
+ 1291  npm install -g create-react-app
+ 1292  projects
+ 1293  mkdir myfirstreactapp
+ 1294  cd myfirstreactapp
+ 1295  create-react-app
+ 1296  create-react-app my-first-react-app
+ 1297  cd my-first-react-app
+ 1298  ..
+ 1299  $ brew upgrade yarn
+ 1300  ..
+ 1301  $ brew upgrade yarn
+ 1302  brew upgrade yarn
+ 1303  yarn start
+ 1304  ..
+ 1305  .cd .
+ 1306  projects
+ 1307  my-first-react-app
+ 1308  yarn start
+ 1309  projects
+ 1310  my-first-react-app
+ 1311  lsa
+ 1312  src
+ 1313  lsa
+ 1314  ..
+ 1315  create-react-app ravenous
+ 1316  ..
+ 1317  ravenous
+ 1318  lsa
+ 1319  npm start
+ 1320  ravenous
+ 1321  yarn start
+ 1322  projects/ravenous/public
+ 1323  touch reset.css
+ 1324  vim reset.css
+ 1325  ..
+ 1326  src
+ 1327  mkdir components
+ 1328  components
+ 1329  mkdir Business
+ 1330  Business
+ 1331  touch Business.js
+ 1332  touch Business.css
+ 1333  ..
+ 1334  mkdir BusinessList
+ 1335  cd BusinessList
+ 1336  touch BusinessList.js
+ 1337  touch BusinessList.css
+ 1338  ..
+ 1339  mkdir SearchBar
+ 1340  SearchBar
+ 1341  touch SearchBar.js
+ 1342  touch SearchBar.css
+ 1343  ..
+ 1344  ravenous
+ 1345  git init
+ 1346  gst
+ 1347  git add .
+ 1348  gst
+ 1349  git commit -m 'first commit of project Yelp alike - implemented components'
+ 1350  git remote add origin https://github.com/soozie/ravenous.git
+ 1351  git push -u origin master
+ 1352  yarn start
+ 1353  ..
+ 1354  ravenous
+ 1355  npm start
+ 1356  gst
+ 1357  git add .
+ 1358  gst
+ 1359  git commit -m 'added props to pass down info between components'
+ 1360  gst
+ 1361  git push origin master
+ 1362  npm start
+ 1363  src
+ 1364  mkdir util
+ 1365  util
+ 1366  touch Yelp.js
+ 1367  ..
+ 1368  npm install whatwg-fetch --save
+ 1369  yarn start
+ 1370  npm run
+ 1371  npm run start
+ 1372  yarn start
+ 1373  yarn install
+ 1374  yarn start
+ 1375  gst
+ 1376  git add .
+ 1377  git commit -m 'Added yelp requests - first functional version of ravenous'
+ 1378  gst
+ 1379  git push origin master
+ 1380  gst
+ 1381  yarn start
+ 1382  ..
+ 1383  mkdir jammming
+ 1384  jammming
+ 1385  touch index.html
+ 1386  touch style.css
+ 1387  ..
+ 1388  create-react-app jammming
+ 1389  cd jammming
+ 1390  yarn start
+ 1391  projects
+ 1392  jammming
+ 1393  src
+ 1394  lsa
+ 1395  mkdir components
+ 1396  components
+ 1397  mkdir Header
+ 1398  \tHeader
+ 1399  touch Header.js
+ 1400  touch Header.scss
+ 1401  ..
+ 1402  mkdir Search.js
+ 1403  lsa
+ 1404  rm Search.js
+ 1405  rm -rf Search.js
+ 1406  lsa
+ 1407  mkdir Search
+ 1408  Search
+ 1409  toouch Search.js
+ 1410  touch Search.js
+ 1411  touch Search.scss
+ 1412  ..
+ 1413  mkdir Results
+ 1414  Results
+ 1415  touch Results.js
+ 1416  touch Results.scss
+ 1417  ..
+ 1418  mkdir NewPlaylist
+ 1419  NewPlaylist
+ 1420  yarn start
+ 1421  lsa
+ 1422  touch NewPlaylist.js
+ 1423  touch NewPlaylist.scss
+ 1424  ..
+ 1425  mkdir Track
+ 1426  cd Track
+ 1427  touch Track.js
+ 1428  touch Track.scss
+ 1429  ..
+ 1430  lsa
+ 1431  ..
+ 1432  lsa
+ 1433  src
+ 1434  mkdir util
+ 1435  util
+ 1436  touch Spotify.js
+ 1437  yarn start
+ 1438  yarn add querystring
+ 1439  yarn start
+ 1440  ..
+ 1441  git init
+ 1442  gst
+ 1443  git add .
+ 1444  git commit -m 'added components - created first interaction with Spotify APIs'
+ 1445  git remote add origin https://github.com/soozie/jammming.git
+ 1446  git push -u origin master
+ 1447  ..
+ 1448  touch keys.json
+ 1449  git init
+ 1450  git add .
+ 1451  gst
+ 1452  ..
+ 1453  proje
+ 1454  projects
+ 1455  gst
+ 1456  grhh
+ 1457  lsa
+ 1458  rm -rf .git
+ 1459  cd jammming
+ 1460  gst
+ 1461  lsa
+ 1462  git log
+ 1463  git reset --soft 4e9bad6be3a1cc22887e6d9b9d1b5838aca721d1
+ 1464  gst
+ 1465  git log
+ 1466  open -a "SourceTree" .
+ 1467  rm -rf .git
+ 1468  git init
+ 1469  gst
+ 1470  git add .
+ 1471  git commit -m 'added components - created first interaction with Spotify APIs'
+ 1472  git remote add origin https://github.com/soozie/jammming.git
+ 1473  git push -u origin master
+ 1474  lsa
+ 1475  rm -rf .git
+ 1476  git init
+ 1477  git add .
+ 1478  gst
+ 1479  git commit -m 'added components - created first interaction with Spotify APIs'
+ 1480  git remote add origin https://github.com/soozie/jammming.git
+ 1481  git push -u origin master
+ 1482  yarn start
+ 1483  ..
+ 1484  lsa
+ 1485  mv keys.json jammming/src
+ 1486  jammming
+ 1487  gst
+ 1488  vim .gitignore
+ 1489  gst
+ 1490  git add .
+ 1491  git commit -m 'added dynamic search results + refactoring'
+ 1492  git push origin master
+ 1493  yarn add halogen
+ 1494  yarn start
+ 1495  yarn remove halogen
+ 1496  yarn add halogenium
+ 1497  yarn start
+ 1498  gstm
+ 1499  gst
+ 1500  git add .
+ 1501  open -a "SourceTree" .
+ 1502  gst
+ 1503  git push origin master
+ 1504  ..
+ 1505  ifconfig | grep inet
+ 1506  projects
+ 1507  jammming
+ 1508  gst
+ 1509  git add .
+ 1510  git commit -m 'added reset playlist on save - removed logs'
+ 1511  gst
+ 1512  git push orgin master
+ 1513  git push origin master
+ 1514  lsa
+ 1515  src
+ 1516  lsa
+ 1517  components
+ 1518  lsa
+ 1519  mkdir Playlists
+ 1520  Playlists
+ 1521  ..
+ 1522  mv Playlists MyPlaylists
+ 1523  MyPlaylists
+ 1524  touch MyPlaylists.js
+ 1525  touch MyPlaylists.scss
+ 1526  ..
+ 1527  mkdir Playlist && touch Playlist.js && touch Playlist.scss
+ 1528  ..
+ 1529  gst
+ 1530  git add .
+ 1531  gst
+ 1532  git commit -m 'code reactoring - added components for new features, such as show current user playlists after login - as default, then give the user option to create a new playlist. '
+ 1533  git push origin master
+ 1534  gst
+ 1535  git push origin master
+ 1536  ssh-keygen -t rsa -b 4096 -C "soozie.zen@gmail.com"
+ 1537  pbcopy < ~/.ssh/id_rsa.pub
+ 1538  git push origin master
+ 1539  gst
+ 1540  git config --global
+ 1541  git config --global user.email
+ 1542  git config --global user.email "soozie.zen@gmail.com"
+ 1543  git config --global user.email
+ 1544  gst
+ 1545  git push origin master
+ 1546  gst
+ 1547  node --version
+ 1548  npm --version
+ 1549  create-react-app --version
+ 1550  npm install gh-pages --save-dev
+ 1551  npm i npm
+ 1552  npm run deploy
+ 1553  yarn deploy
+ 1554  yarn add react-scripts
+ 1555  yarn deploy
+ 1556  yarn start
+ 1557  sass src/components/PlaylistBox/PlaylistBox.scss src/components/PlaylistBox/PlaylistBox.css
+ 1558  sass src/components/MyPlaylists/MyPlaylists.scss src/components/MyPlaylists/MyPlaylists.css
+ 1559  yarn start
+ 1560  sass src/components/MyPlaylists/MyPlaylists.scss src/components/MyPlaylists/MyPlaylists.css
+ 1561  sass src/components/PlaylistBox/PlaylistBox.scss src/components/PlaylistBox/PlaylistBox.css
+ 1562  sass src/components/MyPlaylists/MyPlaylists.scss src/components/MyPlaylists/MyPlaylists.css
+ 1563  sass src/components/Playlist/Playlist.scss src/components/Playlist/Playlist.css
+ 1564  sass src/components/MyPlaylists/MyPlaylists.scss src/components/MyPlaylists/MyPlaylists.css
+ 1565  sass src/components/PlaylistBox/PlaylistBox.scss src/components/PlaylistBox/PlaylistBox.css
+ 1566  sass src/components/NewPlaylist/NewPlaylist.scss src/components/NewPlaylist/NewPlaylist.css
+ 1567  gst
+ 1568  git add .
+ 1569  gst
+ 1570  git commit -m 'added scss and divided for each component - transpiled scss/css'
+ 1571  gst
+ 1572  git push origin master
+ 1573  yarn start
+ 1574  sass src/components/NewPlaylist/NewPlaylist.scss src/components/NewPlaylist/NewPlaylist.css
+ 1575  sass src/components/Results/Results.scss src/components/Results/Results.css
+ 1576  sass src/components/NewPlaylist/NewPlaylist.scss src/components/NewPlaylist/NewPlaylist.css
+ 1577  sass src/components/PlaylistBox/PlaylistBox.scss src/components/PlaylistBox/PlaylistBox.css
+ 1578  sass src/components/MyPlaylists/MyPlaylists.scss src/components/MyPlaylists/MyPlaylists.css
+ 1579  sass src/components/Playlist/Playlist.scss src/components/Playlist/Playlist.css
+ 1580  sass src/components/Track/Track.scss src/components/Track/Track.css
+ 1581  sass src/components/Search/Search.scss src/components/Search/Search.css
+ 1582  sass src/components/Track/Track.scss src/components/Track/Track.css
+ 1583  sass src/components/Search/Search.scss src/components/Search/Search.css
+ 1584  sass src/components/Playlist/Playlist.scss src/components/Playlist/Playlist.css
+ 1585  sass src/components/MyPlaylists/MyPlaylists.scss src/components/MyPlaylists/MyPlaylists.css
+ 1586  sass src/components/PlaylistBox/PlaylistBox.scss src/components/PlaylistBox/PlaylistBox.css
+ 1587  sass src/components/NewPlaylist/NewPlaylist.scss src/components/NewPlaylist/NewPlaylist.css
+ 1588  sass src/components/Results/Results.scss src/components/Results/Results.css
+ 1589  src
+ 1590  ..
+ 1591  projects/jammming/src
+ 1592  lsa
+ 1593  touch App.scss
+ 1594  sass src/App.scss src/App.css
+ 1595  sass src/components/Results/Results.scss src/components/Results/Results.css
+ 1596  sass src/components/Track/Track.scss src/components/Track/Track.css
+ 1597  sass src/App.scss src/App.css
+ 1598  sass src/components/Results/Results.scss src/components/Results/Results.css
+ 1599  sass src/components/NewPlaylist/NewPlaylist.scss src/components/NewPlaylist/NewPlaylist.css
+ 1600  ..
+ 1601  gst
+ 1602  git add .
+ 1603  gst
+ 1604  git commit -m 'added functionality to update existing playlists'
+ 1605  gst
+ 1606  git push origin master
+ 1607  yarn start
+ 1608  sass src/App.scss src/App.css
+ 1609  sass src/components/Results/Results.scss src/components/Results/Results.css
+ 1610  sass src/components/PlaylistBox/PlaylistBox.scss src/components/PlaylistBox/PlaylistBox.css
+ 1611* sass src/components/Results/Results.scss src/components/Results/Results.css
+ 1612* sass src/App.scss src/App.css
+ 1613* yarn start
+ 1614  npm install gulp-sass --save-dev
+ 1615  gst
+ 1616* sass src/components/Search/Search.scss src/components/Search/Search.css
+ 1617  gco package.json
+ 1618  gco package-lock.json
+ 1619  yarn
+ 1620* yarn start
+ 1621  yarn add react-scripts --dev
+ 1622* yarn start
+ 1623  touch gulpfile.js
+ 1624  lsa
+ 1625  history

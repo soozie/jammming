@@ -1,6 +1,7 @@
 import React from 'react';
 import { PulseLoader } from 'halogenium';
 import Playlist from '../Playlist/Playlist.js';
+import '../../color_chart/colorChart.css';
 import './MyPlaylists.css';
 
 class MyPlaylists extends React.Component {

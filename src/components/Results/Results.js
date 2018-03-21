@@ -1,5 +1,6 @@
 import React from 'react';
 import Track from '../Track/Track.js';
+import '../../color_chart/colorChart.css';
 import './Results.css';
 
 class Results extends React.Component {

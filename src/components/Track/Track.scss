@@ -1,11 +1,23 @@
+$cl-cream: #EDECE3;
+$cl-black: #11151C;
+$cl-light: #FCF9F7;
+$cl-orange: #D65237;
+
 html {
   body {
     #root {
       .Track {
-        display: flex;
         align-items: center;
-        border-bottom: 1px solid rgba(256, 256, 256, 0.8);
+        background-color: transparent;
+        border-bottom: 1px solid $cl-orange;
+        cursor: pointer;
+        display: flex;
         justify-content: space-between;
+        transition: background-color .25s;
+
+          &:hover {
+            background-color: $cl-orange;
+          }
 
         &__information {
           flex-grow: 1;
@@ -22,7 +34,7 @@ html {
           p {
             font-size: .83rem;
             font-weight: 300;
-            color: rgba(256, 256, 256, 0.8);
+            color: #090D0F;
             margin: 0;
           }
         }
@@ -34,7 +46,7 @@ html {
           transition: color .25s;
 
           &:hover {
-            color: rgba(265, 265, 265, .5);
+            background-color: $cl-orange;
           }
         }
       }

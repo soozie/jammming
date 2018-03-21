@@ -6,15 +6,12 @@ import Header from './components/Header/Header.js';
 import Search from './components/Search/Search.js';
 import Results from './components/Results/Results.js';
 import PlaylistBox from './components/PlaylistBox/PlaylistBox.js';
-import Spotify from './util/Spotify.js';
-
-const spotify = new Spotify();
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     let isLoggedIn = false;
-    if (spotify.accessToken) {
+    if (props.spotify.accessToken) {
       isLoggedIn = true;
     }
     this.state = {
@@ -28,9 +25,9 @@ class App extends Component {
   }
 
   componentWillMount() {
-    const accessToken = spotify.accessToken;
+    const accessToken = this.props.spotify.accessToken;
     if (accessToken) {
-      spotify.getMe().then(userObject => {
+      this.props.spotify.getMe().then(userObject => {
         this.setState({
           userId: userObject.id
         });
@@ -40,9 +37,9 @@ class App extends Component {
 
   handleSpotifySearch(valueSpotifySearch) {
     if (!this.state.isLoggedInState) {
-      spotify.loginFunction();
+      this.props.spotify.loginFunction();
     } else {
-      spotify.getSearch(valueSpotifySearch)
+      this.props.spotify.getSearch(valueSpotifySearch)
         .then(response => {
           this.setState({
             searchResults: response
@@ -70,7 +67,7 @@ class App extends Component {
               newPlaylist={this.state.newPlaylist}
             />
             <PlaylistBox
-              spotify={spotify}
+              spotify={this.props.spotify}
               userId={this.state.userId}
               newPlaylist={this.state.newPlaylist}
               updatePlaylist={this.handleUpdatePlaylist}

@@ -7,10 +7,11 @@ html body #root .SearchBar {
   html body #root .SearchBar input {
     width: 287px;
     padding: .88rem 0;
-    border: 1px solid #fff;
+    background-color: transparent;
+    border: 1px solid #D65237;
     border-radius: 3px;
     margin-bottom: 2.22rem;
-    color: #010c3f;
+    color: #EDECE3;
     text-align: center;
     font-size: 1rem; }
     html body #root .SearchBar input:focus {
@@ -20,11 +21,10 @@ html body #root .SearchBar {
     width: 8.11rem;
     padding: .77rem 0;
     border-radius: 54px;
-    background-color: #010c3f;
+    border: 1px solid #D65237;
+    background-color: transparent;
     text-align: center;
     font-size: .833rem;
     transition: background-color .25s; }
     html body #root .SearchBar a:hover {
-      background-color: rgba(108, 65, 233, 0.7); }
-
-/*# sourceMappingURL=Search.css.map */
+      background-color: #D65237; }

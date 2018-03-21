@@ -1,19 +1,27 @@
+$cl-cream: #EDECE3;
+$cl-black: #11151C;
+$cl-light: #FCF9F7;
+$cl-orange: #D65237;
+
 html {
   body {
     #root {
       .Results {
-        width: 50%;
-        height: 950px;
-        overflow-y: auto;
-        padding: .88rem;
-        background-color: rgba(1, 12, 63, 0.7);
-        box-shadow: 0 4px 2px 2px #000000;
+        background-color: transparent;
+        border: 1px solid;
+        border-color: $cl-orange;
+        border-radius: 54px;
+        box-shadow: 0 4px 2px 2px $cl-light;
         display: flex;
         flex-direction: column;
+        height: 950px;
+        padding: .88rem;
+        overflow-y: auto;
         overflow: hidden;
+        width: 50%;
 
         h2 {
-          
+
         }
 
         &__trackList {

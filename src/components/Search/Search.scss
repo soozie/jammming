@@ -1,3 +1,8 @@
+$cl-cream: #EDECE3;
+$cl-black: #11151C;
+$cl-light: #FCF9F7;
+$cl-orange: #D65237;
+
 html {
   body {
     #root {
@@ -11,10 +16,11 @@ html {
         input {
           width: 287px;
           padding: .88rem 0;
-          border: 1px solid #fff;
+          background-color: transparent;
+          border: 1px solid $cl-orange;
           border-radius: 3px;
           margin-bottom: 2.22rem;
-          color: #010c3f;
+          color: $cl-cream;
           text-align: center;
           font-size: 1rem;
 
@@ -28,13 +34,14 @@ html {
           width: 8.11rem;
           padding: .77rem 0;
           border-radius: 54px;
-          background-color: #010c3f;
+          border: 1px solid $cl-orange;
+          background-color: transparent;
           text-align: center;
           font-size: .833rem;
           transition: background-color .25s;
 
           &:hover {
-            background-color: rgba(108, 65, 233, .7);
+            background-color: $cl-orange;
           }
         }
       }

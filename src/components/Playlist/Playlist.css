@@ -1,7 +1,14 @@
 html body #root .EachPlaylist {
-  display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.8); }
+  background-color: transparent;
+  border-bottom: 1px solid #D65237;
+  cursor: pointer;
+  display: flex;
+  font-size: .833rem;
+  padding: .77rem 0;
+  transition: background-color .25s; }
+  html body #root .EachPlaylist:hover {
+    background-color: #D65237; }
   html body #root .EachPlaylist__information {
     flex-grow: 1;
     display: flex;
@@ -13,14 +20,4 @@ html body #root .EachPlaylist {
       margin-bottom: .22rem; }
     html body #root .EachPlaylist__information p {
       font-size: .83rem;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.8); }
-  html body #root .EachPlaylist__action {
-    cursor: pointer;
-    padding: .5rem;
-    font-size: 1.05rem;
-    transition: color .25s; }
-    html body #root .EachPlaylist__action:hover {
-      color: rgba(255, 255, 255, 0.5); }
-
-/*# sourceMappingURL=Playlist.css.map */
+      font-weight: 300; }

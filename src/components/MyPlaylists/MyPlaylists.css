@@ -1,8 +1,12 @@
 html body #root .MyPlaylist {
   display: flex;
   flex-direction: column;
-  width: 100%; }
+  width: 100%;
+  background-color: transparent;
+  border-radius: 54px;
+  text-align: center;
+  border: none; }
   html body #root .MyPlaylist--hidden {
     display: none; }
-
-/*# sourceMappingURL=MyPlaylists.css.map */
+  html body #root .MyPlaylist h1 {
+    border: none; }

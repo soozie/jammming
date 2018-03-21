@@ -1,11 +1,12 @@
 import React from 'react';
+import '../../color_chart/colorChart.css';
 import './Search.css';
 
 class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: 'riri'
+      input: ''
     }
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);

@@ -1,3 +1,8 @@
+$cl-cream: #EDECE3;
+$cl-black: #11151C;
+$cl-light: #FCF9F7;
+$cl-orange: #D65237;
+
 html {
   body {
     #root {
@@ -5,9 +10,17 @@ html {
         display: flex;
         flex-direction: column;
         width: 100%;
+        background-color: transparent;
+        border-radius: 54px;
+        text-align: center;
+        border: none;
 
         &--hidden {
           display: none;
+        }
+
+        h1 {
+          border: none;
         }
 
         &__container {

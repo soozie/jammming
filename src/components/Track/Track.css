@@ -1,8 +1,13 @@
 html body #root .Track {
-  display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-  justify-content: space-between; }
+  background-color: transparent;
+  border-bottom: 1px solid #D65237;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  transition: background-color .25s; }
+  html body #root .Track:hover {
+    background-color: #D65237; }
   html body #root .Track__information {
     flex-grow: 1;
     display: flex;
@@ -15,7 +20,7 @@ html body #root .Track {
     html body #root .Track__information p {
       font-size: .83rem;
       font-weight: 300;
-      color: rgba(255, 255, 255, 0.8);
+      color: #090D0F;
       margin: 0; }
   html body #root .Track__action {
     cursor: pointer;
@@ -23,6 +28,4 @@ html body #root .Track {
     font-size: 1.05rem;
     transition: color .25s; }
     html body #root .Track__action:hover {
-      color: rgba(255, 255, 255, 0.5); }
-
-/*# sourceMappingURL=Track.css.map */
+      background-color: #D65237; }

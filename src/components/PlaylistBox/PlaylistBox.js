@@ -2,6 +2,7 @@ import React from 'react';
 import { PulseLoader } from 'halogenium';
 import MyPlaylists from '../MyPlaylists/MyPlaylists.js';
 import NewPlaylist from '../NewPlaylist/NewPlaylist.js';
+import '../../color_chart/colorChart.css';
 import './PlaylistBox.css';
 
 class PlaylistBox extends React.Component {
@@ -51,7 +52,7 @@ class PlaylistBox extends React.Component {
   }
 
   handleSaveSpotifyPlaylist() {
-    console.log(this.state.saveButton);
+    console.log(this.state.selectedPlaylist);
     if (this.state.saveButton === 'UPDATE PLAYLIST') {
       this.setState({
         saveInProgress: true
@@ -73,7 +74,7 @@ class PlaylistBox extends React.Component {
       this.setState({
         saveInProgress: true
       });
-      this.props.spotify.postPlaylist(this.state.playlistName, this.props.userId, this.props.newPlaylist)
+      this.props.spotify.postPlaylist(this.state.selectedPlaylist.name, this.props.userId, this.props.newPlaylist)
       .then(response => {
         // response = 'success'
         // OR response = error object { error: [Object] }
@@ -112,6 +113,7 @@ class PlaylistBox extends React.Component {
       myPlaylistVisible: false,
       newPlaylistVisible: true,
       playlistViewButton: 'MY PLAYLISTS',
+      selectedPlaylist: playlistProp,
       playlistName: playlistProp.name,
       saveButton: 'UPDATE PLAYLIST'
     });
