@@ -2,14 +2,14 @@ import React from 'react';
 import { PulseLoader } from 'halogenium';
 import MyPlaylists from '../MyPlaylists/MyPlaylists.js';
 import NewPlaylist from '../NewPlaylist/NewPlaylist.js';
-import '../../color_chart/colorChart.css';
 import './PlaylistBox.css';
 
 class PlaylistBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      saveInProgress: false,
+      requestStatus: 'default', // can be 'done', 'in-progress', 'failed'
+      errorMessage: null,
       myPlaylists: [],
       playlistName: '',
       selectedPlaylist: {},
@@ -52,39 +52,46 @@ class PlaylistBox extends React.Component {
   }
 
   handleSaveSpotifyPlaylist() {
-    console.log(this.state.selectedPlaylist);
+    this.setState({
+      requestStatus: 'in-progress'
+    });
     if (this.state.saveButton === 'UPDATE PLAYLIST') {
-      this.setState({
-        saveInProgress: true
-      });
       this.props.spotify.postUpdatePlaylist(this.state.selectedPlaylist.id, this.props.userId, this.props.newPlaylist)
       .then(response => {
+        console.log(response);
         // response = 'success'
         // OR response = error object { error: [Object] }
         if (response === 'success') {
           this.setState({
-            saveInProgress: false
+            requestStatus: 'done'
           });
           this.props.updatePlaylist([]);
           // GET udpated playlists from Spotify API
           this.getUpdatedPlaylists();
+        } else {
+          this.setState({
+            requestStatus: 'failed',
+            errorMessage: response.error.message
+          });
         }
       })
     } else {
-      this.setState({
-        saveInProgress: true
-      });
-      this.props.spotify.postPlaylist(this.state.selectedPlaylist.name, this.props.userId, this.props.newPlaylist)
+      this.props.spotify.postPlaylist(this.state.playlistName, this.props.userId, this.props.newPlaylist)
       .then(response => {
         // response = 'success'
         // OR response = error object { error: [Object] }
         if (response === 'success') {
           this.setState({
-            saveInProgress: false
+            requestStatus: 'done'
           });
           this.props.updatePlaylist([]);
           // GET udpated playlists from Spotify API
           this.getUpdatedPlaylists();
+        } else {
+          this.setState({
+            requestStatus: 'failed',
+            errorMessage: response.error.message
+          });
         }
       })
     }
@@ -121,9 +128,17 @@ class PlaylistBox extends React.Component {
 
   render() {
     let saveButton = this.state.saveButton;
-    if (this.state.saveInProgress) {
+    if (this.state.requestStatus === 'in-progress') {
       saveButton = (<PulseLoader color={'#FF0000'} />);
-    };
+    } else if (this.state.requestStatus === 'done') {
+      saveButton = 'DONE';
+    } else if (this.state.requestStatus === 'failed') {
+      saveButton = 'TRY AGAIN';
+    }
+    let disabledClassName = '';
+    if (this.state.myPlaylistVisible) {
+      disabledClassName = 'PlaylistBox__save--disabled';
+    }
     return (
       <div className="PlaylistBox">
         <NewPlaylist
@@ -132,7 +147,6 @@ class PlaylistBox extends React.Component {
           savePlaylist={this.handleSaveSpotifyPlaylist}
           newPlaylist={this.props.newPlaylist}
           removeTracksFromPlaylist={this.handleRemoveTracksFromPlaylist}
-          saveInProgress={this.state.saveInProgress}
           newPlaylistVisible={this.state.newPlaylistVisible}
         />
         <MyPlaylists
@@ -145,10 +159,10 @@ class PlaylistBox extends React.Component {
             className="PlaylistBox__save"
             onClick={this.handleShowNewPlaylist}>{this.state.playlistViewButton}
           </a>
-          <a
-            className="PlaylistBox__save"
+          <button
+            className={`PlaylistBox__save ${disabledClassName}`}
             onClick={this.handleSaveSpotifyPlaylist}>{saveButton}
-          </a>
+          </button>
         </div>
       </div>
     );

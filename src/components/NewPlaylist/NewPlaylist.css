@@ -4,9 +4,7 @@ html body #root .NewPlaylist {
   border-radius: 3px;
   display: flex;
   flex-direction: column;
-  min-height: 400px;
-  max-height: 950px;
-  overflow-y: scroll; }
+  overflow-y: hidden; }
   html body #root .NewPlaylist--hidden {
     display: none; }
   html body #root .NewPlaylist input {
@@ -17,14 +15,15 @@ html body #root .NewPlaylist {
     border-radius: 3px;
     font-family: 'Poppins', sans-serif;
     font-size: 1.55rem;
-    color: #EDECE3;
-    padding: .88rem 0;
+    color: #11151C;
+    padding-bottom: 15px;
     text-align: center;
     width: 100%; }
     html body #root .NewPlaylist input:focus {
       outline: none; }
   html body #root .NewPlaylist__trackList {
-    width: 100%; }
+    width: 100%;
+    overflow-y: auto; }
   html body #root .NewPlaylist__save {
     background-color: transparent;
     border: 1px solid #D65237;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { PulseLoader } from 'halogenium';
-import '../../color_chart/colorChart.css';
 import './Playlist.css';
 
 class Playlist extends React.Component {
@@ -24,8 +23,8 @@ class Playlist extends React.Component {
         onClick={this.handleSelectPlaylist}
       >
         <div className="EachPlaylist__information">
-          <h3>Title: {playlistTitle}</h3>
-          <p>Tracks: {numOfTracks}</p>
+          <h3>{playlistTitle}</h3>
+          <p>TRACKS: {numOfTracks}</p>
         </div>
       </div>
     );

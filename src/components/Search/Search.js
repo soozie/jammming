@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../color_chart/colorChart.css';
 import './Search.css';
 
 class Search extends React.Component {
@@ -10,6 +9,7 @@ class Search extends React.Component {
     }
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleEnterKey = this.handleEnterKey.bind(this);
   }
 
   handleInputChange(event) {
@@ -21,10 +21,22 @@ class Search extends React.Component {
     event.preventDefault();
   }
 
+  handleEnterKey(event) {
+    if (event.key === 'Enter') {
+      this.handleSearch(event);
+      console.log('done');
+    }
+  }
+
   render() {
     return(
       <div className="SearchBar">
-        <input onChange={this.handleInputChange} placeholder="Enter A Song, Album or Artist" value={this.state.input} />
+        <input
+          onChange={this.handleInputChange}
+          placeholder="Enter A Song, Album or Artist"
+          value={this.state.input}
+          onKeyPress={this.handleEnterKey}
+        />
         <a onClick={this.handleSearch}>SEARCH</a>
       </div>
     )

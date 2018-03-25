@@ -17,10 +17,6 @@ class NewPlaylist extends React.Component {
     if (!this.props.newPlaylistVisible) {
       hiddenClassName = 'NewPlaylist--hidden';
     }
-    let aValue = 'SAVE TO SPOTIFY';
-    if (this.props.saveInProgress) {
-      aValue = (<PulseLoader color={'#FF0000'} />);
-    };
     return (
       <div className={`NewPlaylist ${hiddenClassName}`}>
         <input

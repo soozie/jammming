@@ -10,18 +10,24 @@ html {
         background-color: transparent;
         border: 1px solid;
         border-color: $cl-orange;
-        border-radius: 54px;
+        border-radius: 3px;
         box-shadow: 0 4px 2px 2px $cl-light;
         display: flex;
         flex-direction: column;
-        height: 950px;
-        padding: .88rem;
+        height: 400px;
+        padding: 1rem;
         overflow-y: auto;
+        margin-right: 24px;
         overflow: hidden;
-        width: 50%;
+        flex: 1;
 
         h2 {
-
+          margin-top: 0;
+          border-bottom: 1px solid $cl-orange;
+          padding-bottom: 16px;
+          margin-bottom: 0;
+          font-size: 1.55rem;
+          text-align: center;
         }
 
         &__trackList {

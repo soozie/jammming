@@ -7,24 +7,32 @@ html {
   body {
     #root {
       .MyPlaylist {
+        background-color: transparent;
+        border: none;
+        border-radius: 3px;
         display: flex;
         flex-direction: column;
-        width: 100%;
-        background-color: transparent;
-        border-radius: 54px;
+        overflow: hidden;
         text-align: center;
-        border: none;
+        width: 100%;
 
         &--hidden {
           display: none;
         }
 
         h1 {
-          border: none;
+          border-bottom: 1px solid $cl-orange;
+          display: block;
+          font-size: 1.55rem;
+          margin-bottom: 0;
+          margin-top: 0;
+          padding-bottom: 16px;
+          text-align: center;
+          color: $cl-black;
         }
 
         &__container {
-
+          overflow-y: scroll;
         }
       }
     }

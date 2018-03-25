@@ -1,7 +1,6 @@
 import React from 'react';
 import { PulseLoader } from 'halogenium';
 import Playlist from '../Playlist/Playlist.js';
-import '../../color_chart/colorChart.css';
 import './MyPlaylists.css';
 
 class MyPlaylists extends React.Component {
@@ -32,7 +31,7 @@ class MyPlaylists extends React.Component {
     return (
       <div className={`MyPlaylist ${hiddenClassName}`}>
         <h1>My Playlists</h1>
-        <div className="MyPlaylists__container">
+        <div className="MyPlaylist__container">
           {
             this.props.myPlaylists.map(playlist => {
               return this.displayPlaylistsList(playlist);

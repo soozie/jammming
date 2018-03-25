@@ -125,7 +125,10 @@ class Spotify {
     })
     .then(response => { return response.json(); })
     .then(jsonResponse => {
-      console.log('!');
+      console.log('!', jsonResponse);
+      if (jsonResponse.error) {
+        return jsonResponse;
+      }
       return 'success';
     })
     .catch(error => { return error; });

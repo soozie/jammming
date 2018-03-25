@@ -5,15 +5,19 @@ $cl-orange: #D65237;
 
 html {
   font-size: 18px;
+  box-sizing: border-box;
+  
+  * {
+    box-sizing: border-box;
+  }
 
   h1 {
-    border: 1px solid $cl-orange;
     background-color: transparent;
     color: #A22C29;
+    display: flex;
     font-family: 'Poppins', sans-serif;
     font-size: 1.88rem;
     margin: 0;
-    padding: .77rem 0;
     text-align: center;
 
     .highlight {
