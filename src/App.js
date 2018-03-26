@@ -36,15 +36,15 @@ class App extends Component {
   }
 
   handleSpotifySearch(valueSpotifySearch) {
-    if (!this.state.isLoggedInState) {
-      this.props.spotify.loginFunction();
-    } else {
+    if (this.state.isLoggedInState && valueSpotifySearch) {
       this.props.spotify.getSearch(valueSpotifySearch)
-        .then(response => {
-          this.setState({
-            searchResults: response
-          });
-        })
+      .then(response => {
+        this.setState({
+          searchResults: response
+        });
+      })
+    } else if (!this.state.isLoggedInState) {
+      this.props.spotify.loginFunction();
     }
   }
 
