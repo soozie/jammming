@@ -8,15 +8,15 @@ class PlaylistBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      requestStatus: 'default', // can be 'done', 'in-progress', 'failed'
-      errorMessage: null,
       myPlaylists: [],
       playlistName: '',
       selectedPlaylist: {},
       myPlaylistVisible: true,
       newPlaylistVisible: false,
       playlistViewButton: 'NEW PLAYLIST',
-      saveButton: 'SAVE PLAYLIST'
+      saveButton: 'SAVE PLAYLIST',
+      saveInProgress: false, // can be true or false
+      errorMessage: null
     };
     this.handlePlaylistNameChange = this.handlePlaylistNameChange.bind(this);
     this.handleRemoveTracksFromPlaylist = this.handleRemoveTracksFromPlaylist.bind(this);
@@ -53,7 +53,7 @@ class PlaylistBox extends React.Component {
 
   handleSaveSpotifyPlaylist() {
     this.setState({
-      requestStatus: 'in-progress'
+      saveInProgress: true
     });
     if (this.state.saveButton === 'UPDATE PLAYLIST') {
       this.props.spotify.postUpdatePlaylist(this.state.selectedPlaylist.id, this.props.userId, this.props.newPlaylist)
@@ -63,14 +63,14 @@ class PlaylistBox extends React.Component {
         // OR response = error object { error: [Object] }
         if (response === 'success') {
           this.setState({
-            requestStatus: 'done'
+            saveInProgress: false
           });
           this.props.updatePlaylist([]);
           // GET udpated playlists from Spotify API
           this.getUpdatedPlaylists();
         } else {
           this.setState({
-            requestStatus: 'failed',
+            saveInProgress: false,
             errorMessage: response.error.message
           });
         }
@@ -82,14 +82,14 @@ class PlaylistBox extends React.Component {
         // OR response = error object { error: [Object] }
         if (response === 'success') {
           this.setState({
-            requestStatus: 'done'
+            saveInProgress: false
           });
           this.props.updatePlaylist([]);
           // GET udpated playlists from Spotify API
           this.getUpdatedPlaylists();
         } else {
           this.setState({
-            requestStatus: 'failed',
+            saveInProgress: false,
             errorMessage: response.error.message
           });
         }
@@ -128,13 +128,10 @@ class PlaylistBox extends React.Component {
 
   render() {
     let saveButton = this.state.saveButton;
-    if (this.state.requestStatus === 'in-progress') {
+    if (this.state.saveInProgress) {
       saveButton = (<PulseLoader color={'#FF0000'} />);
-    } else if (this.state.requestStatus === 'done') {
-      saveButton = 'DONE';
-    } else if (this.state.requestStatus === 'failed') {
-      saveButton = 'TRY AGAIN';
     }
+    
     let disabledClassName = '';
     if (this.state.myPlaylistVisible) {
       disabledClassName = 'PlaylistBox__save--disabled';

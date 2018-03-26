@@ -6,49 +6,56 @@ $cl-orange: #D65237;
 html {
   font-size: 18px;
   box-sizing: border-box;
-  
+  background-color: #FCF9F7;
+
   * {
     box-sizing: border-box;
   }
 
-  h1 {
-    background-color: transparent;
-    color: #A22C29;
-    display: flex;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.88rem;
-    margin: 0;
-    text-align: center;
-
-    .highlight {
-      color: #902923;
-    }
-  }
-
-  h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.55rem;
-  }
 
   body {
     #root {
       height: 100%;
 
-      .App {
-        height: 100%;
-        padding: 0 17% 10% 17%;
-        background-color: $cl-light;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        font-family: 'Work Sans', sans-serif;
-        font-weight: 500;
-        color: $cl-black;
+      .Main {
+        display: flex;
+        flex-direction: column;
 
-        &__playlist {
+        h1 {
+          background-color: transparent;
+          color: #A22C29;
           display: flex;
-          justify-content: space-between;
-          width: 100%;
+          font-family: 'Poppins', sans-serif;
+          font-size: 1.88rem;
+          margin: 0;
+          justify-content: center;
+
+          .highlight {
+            color: #902923;
+          }
+        }
+
+        h2 {
+          font-family: 'Poppins', sans-serif;
+          font-size: 1.55rem;
+        }
+
+        .App {
+          height: 100%;
+          padding: 0 17% 10% 17%;
+          background-color: $cl-light;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          font-family: 'Work Sans', sans-serif;
+          font-weight: 500;
+          color: $cl-black;
+
+          &__playlist {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+          }
         }
       }
     }

@@ -54,7 +54,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Main">
         <Header />
         <div className="App">
           <Search
